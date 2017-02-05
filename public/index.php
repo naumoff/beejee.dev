@@ -45,4 +45,3 @@ $router->addRoute('admin/{controller}/{action}',['namespace'=>'Admin']);
 $url = $_SERVER['QUERY_STRING'];
 
 $router->dispatch($url);
-

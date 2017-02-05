@@ -4,6 +4,7 @@
  */
 
 namespace App\Controllers;
+use \App\Models\ModelUser;
 use \Core\View;
 
 /**
@@ -18,10 +19,24 @@ class Home extends \Core\Controller
 	 * @return void
 	 */
 	public function indexAction(){
-		View::render('Home/index.php',
-			[
-				'title'=>'Главная',
-			], FALSE);
+		if(\App\Models\ModelUser::getUserID() == FALSE){
+			$auth = FALSE;
+			View::render('Home/index.php',
+				[
+					'title'=>'Главная',
+					'auth'=>$auth
+				], FALSE);
+		}else{
+			$auth = TRUE;
+			$userName = \App\Models\ModelUser::getUserName();
+			View::render('Home/index.php',
+				[
+					'title'=>'Главная',
+					'auth'=>$auth,
+					'userName'=>$userName
+				], TRUE);
+		}
+
 	}
 	
 	/**

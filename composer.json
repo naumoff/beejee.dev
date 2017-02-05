@@ -1,6 +1,6 @@
 {
-  "name": "vendor_name/package_name",
-  "description": "description_text",
+  "name": "vendor_name/mvc-beejee",
+  "description": "mvc application",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
