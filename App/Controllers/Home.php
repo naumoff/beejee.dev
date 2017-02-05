@@ -21,9 +21,7 @@ class Home extends \Core\Controller
 		View::render('Home/index.php',
 			[
 				'title'=>'Главная',
-				'name'=>'Dave',
-				'colors'=>['red','green','blue']
-			]);
+			], FALSE);
 	}
 	
 	/**
@@ -32,7 +30,7 @@ class Home extends \Core\Controller
 	 */
 	protected function before()
 	{
-		echo '(before)';
+
 	}
 	
 	/**
@@ -41,6 +39,6 @@ class Home extends \Core\Controller
 	 */
 	protected function after()
 	{
-		echo '(after)';
+
 	}
 }

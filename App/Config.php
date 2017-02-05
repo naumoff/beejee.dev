@@ -17,7 +17,7 @@ class Config {
 	 *DB name
 	 * @var string
 	 */
-	const DB_NAME = 'pr_mvc';
+	const DB_NAME = 'pr_beejee';
 	
 	/**
 	 * DB user

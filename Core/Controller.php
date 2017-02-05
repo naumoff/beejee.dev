@@ -67,4 +67,12 @@ abstract class Controller
 	protected function after()
 	{
 	}
+	
+	protected static function validate($data)
+	{
+		$data = trim($data);
+		$data = stripcslashes($data);
+		$data = htmlspecialchars($data);
+		return $data;
+	}
 }

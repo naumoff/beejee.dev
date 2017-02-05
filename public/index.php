@@ -4,7 +4,7 @@
  * Front controller (in public folder)
  * @filesource
  */
-
+session_start();
 /**
  * Autoloader.
  * Function that autoloads files that contains requested Class names

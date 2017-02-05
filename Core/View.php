@@ -36,7 +36,7 @@ class View {
 	 * @param array $args arguments passed to view
 	 * @return void
 	 */
-	public static function render($view, $args=[])
+	public static function render($view, $args=[], $menu = TRUE)
 	{
 		self::$customPath = dirname(__DIR__).'\App\Views\\'.$view;
 		$pattern = '/\/.*/i';
@@ -51,7 +51,9 @@ class View {
 		$file = "../App/Views/{$view}"; // relative to core directory
 		if(is_readable($file)){
 			include self::$header;
-			include self::$topMenu;
+			if($menu) {
+				include self::$topMenu;
+			}
 			include $file; // html content from view folder gen by controller
 			include self::$footer;
 		}else{

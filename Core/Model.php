@@ -14,22 +14,17 @@ use \App\Config;
  */
 abstract class Model {
 	
+	private static $host = Config::DB_HOST;
+	private static $dbname = Config::DB_NAME;
+	private static $username = Config::DB_USER;
+	private static $password = Config::DB_PASS;
+	protected static $db;
+	
 	protected static function getDB()
 	{
-		static $db = null;
-		if($db === null){
-			$host = Config::DB_HOST;
-			$dbname = Config::DB_NAME;
-			$username = Config::DB_USER;
-			$password = Config::DB_PASS;
-			try{
-				$db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8",$username,$password);
-				$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-				return $db;
-			}catch (PDOException $error){
-				echo $error->getMessage();
-			}
-		}
+		static::$db = new PDO("mysql:host=".self::$host.";dbname=".self::$dbname.";charset=utf8",self::$username,self::$password);
+		static::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		return static::$db;
 	}
 	
 }
