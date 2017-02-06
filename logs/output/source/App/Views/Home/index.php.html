@@ -34,11 +34,15 @@
         />
     </head>
     <body>
-        <pre class="brush: php">&lt;h2&gt;Wellcome!&lt;/h2&gt;
-&lt;h4&gt;Please login or register to continue!&lt;/h4&gt;
-&lt;a href=&quot;/user/login-form&quot;&gt;Login&lt;/a&gt;
-&lt;a href=&quot;/user/register-form&quot;&gt;Register&lt;/a&gt;
-
+        <pre class="brush: php">&lt;?php if($auth === FALSE){ ?&gt;
+	&lt;h2&gt;Wellcome!&lt;/h2&gt;
+	&lt;h4&gt;Please login or register to continue!&lt;/h4&gt;
+	&lt;button&gt;&lt;a href=&quot;/user/login-form&quot;&gt;Login&lt;/a&gt;&lt;/button&gt;
+	&lt;button&gt;&lt;a href=&quot;/user/register-form&quot;&gt;Register&lt;/a&gt;&lt;/button&gt;
+&lt;?php }else{ ?&gt;
+	&lt;h2&gt;Wellcome, &lt;?= $userName ?&gt;!&lt;/h2&gt;
+	&lt;button&gt;&lt;a href=&quot;/user/log-out&quot;&gt;Log Out&lt;/a&gt;&lt;/button&gt;
+&lt;?php } ?&gt;
 </pre>
         <script type="text/javascript">
              SyntaxHighlighter.all();

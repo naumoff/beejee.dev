@@ -34,7 +34,24 @@
         />
     </head>
     <body>
-        <pre class="brush: php">&lt;h3&gt;Wellcome to your personal project list, &lt;b&gt;&lt;?= $user ?&gt;&lt;/b&gt; !&lt;/h3&gt;
+        <pre class="brush: php">&lt;h4&gt;Add New Task Form&lt;/h4&gt;
+&lt;form action=&quot;/task/add-task&quot; method=&quot;post&quot;&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;add new task form&lt;/legend&gt;
+		№:&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&lt;input type=&quot;number&quot; name=&quot;:n&quot; style=&quot;width:90px&quot; required&gt; &lt;br&gt;
+		Task:&amp;nbsp&lt;textarea name=&quot;:task&quot;  rows=&quot;3&quot;  cols=&quot;60&quot; required&gt;&lt;/textarea&gt; &lt;br&gt;
+		Date:&amp;nbsp&lt;input type=&quot;date&quot; name=&quot;:date&quot;&gt;
+		Status:&amp;nbsp&lt;select name=&quot;:status&quot;&gt;
+			&lt;option value=&quot;Open&quot;&gt;Open&lt;/option&gt;
+			&lt;option value=&quot;Cancelled&quot;&gt;Cancelled&lt;/option&gt;
+			&lt;option value=&quot;Postponed&quot;&gt;Postponed&lt;/option&gt;
+			&lt;option value=&quot;Completed&quot;&gt;Completed&lt;/option&gt;
+		&lt;/select&gt; &lt;br&gt;&lt;br&gt;
+		&amp;nbsp&lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Save&quot; id=&quot;save&quot;&gt;
+		&amp;nbsp&lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Preview&quot; id=&quot;preview&quot;&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;
+
 </pre>
         <script type="text/javascript">
              SyntaxHighlighter.all();

@@ -50,8 +50,6 @@ use \Core\View;
  */
 class User extends \Core\Controller {
 	
-	public static $user;
-	
 	/**
 	 * controller reveals new user registration form.
 	 * @return void
@@ -166,8 +164,7 @@ class User extends \Core\Controller {
 	
 	/**
 	 * login function.
-	 * function performs user login and creation of object from ModelUser class
-	 * that contains current userID and userName
+	 * function performs user login and writes to session user id and name
 	 * @todo finish wrong authentication procedure
 	 * @return void
 	 */
@@ -183,7 +180,6 @@ class User extends \Core\Controller {
 			}
 			$result = \App\Models\ModelUser::userLogin($_POST);
 			if($result === TRUE){
-				self::userCreation();
 				View::render('User/successPage.php',
 					[
 						'title'=&gt;'Success',
@@ -200,13 +196,17 @@ class User extends \Core\Controller {
 	}
 	
 	/**
-	 * internal function that creates user object from ModelUser class.
-	 * contains user id and user name.
-	 * @return void;
+	 * function clear log session and ModelUser static vars (userID and userName).
+	 * And then redirects to Home page.
+	 * @return void
 	 */
-	private static function userCreation()
+	public function logOutAction()
 	{
-		self::$user = new ModelUser($_SESSION['userID'],$_SESSION['userName']);
+		unset($_SESSION['userID']);
+		unset($_SESSION['userName']);
+		\App\Models\ModelUser::$userID = FALSE;
+		\App\Models\ModelUser::$userName = FALSE;
+		header(&quot;location: /&quot;);
 	}
 }</pre>
         <script type="text/javascript">

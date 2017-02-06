@@ -36,61 +36,66 @@
     <body>
         <pre class="brush: php">&lt;?php
 /**
- * Home controller
+ * Task Controller file
+ * @package \App\Controllers
  */
 
 namespace App\Controllers;
+use \App\Models\ModelTask;
 use \App\Models\ModelUser;
+use Core\Controller;
 use \Core\View;
 
-/**
- * Class Home
- * @package App\Controllers
- */
 
-class Home extends \Core\Controller
-{
+
+class Task extends \Core\Controller{
+	
+	private $userID;
+	private $userName;
+	private $userEmail;
+	
 	/**
-	 * Show index page for Home controller.
+	 * Task constructor.
+	 */
+	public function __construct() {
+		$this-&gt;userID = ModelUser::getUserID();;
+		$this-&gt;userName = ModelUser::getUserName();
+		$this-&gt;userEmail = ModelUser::getUserEmail();
+	}
+	
+	/**
+	 * function reveals to do list for current user
 	 * @return void
 	 */
-	public function indexAction(){
-		if(\App\Models\ModelUser::getUserID() == FALSE){
-			$auth = FALSE;
-			View::render('Home/index.php',
-				[
-					'title'=&gt;'Главная',
-					'auth'=&gt;$auth
-				], FALSE);
-		}else{
-			$auth = TRUE;
-			$userName = \App\Models\ModelUser::getUserName();
-			View::render('Home/index.php',
-				[
-					'title'=&gt;'Главная',
-					'auth'=&gt;$auth,
-					'userName'=&gt;$userName
-				], TRUE);
+	public function listAction()
+	{
+		$data = ModelTask::getUserTaskList($this-&gt;userID);
+		View::render('Task/index.php',
+			[
+				'title'=&gt; 'My tasks',
+				'data' =&gt; $data
+			]);
+	}
+	
+	public function addFormAction()
+	{
+		View::render('Task/taskForm.php',
+			[
+				'title'=&gt;'Add Task'
+			],FALSE);
+	}
+	
+	public function addTaskAction()
+	{
+		if (!empty($_POST['submit']) &amp;&amp; $_POST['submit'] == 'Save') {
+			foreach ($_POST AS $key=&gt;$value){
+				$_POST[$key] = Controller::validate($value);
+			}
+			$_POST[':userID'] = $this-&gt;userID;
+			$_POST[':userName'] = $this-&gt;userName;
+			$_POST[':userEmail'] = $this-&gt;userEmail;
+			$submitStatus = ModelTask::insertNewTask($_POST);
 		}
-
-	}
-	
-	/**
-	 * Before filter.
-	 * @return void
-	 */
-	protected function before()
-	{
-
-	}
-	
-	/**
-	 * After filter
-	 * @return void
-	 */
-	protected function after()
-	{
-
 	}
 }</pre>
         <script type="text/javascript">

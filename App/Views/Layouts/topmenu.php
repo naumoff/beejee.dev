@@ -1,4 +1,4 @@
 <nav>
-	<a href="/">Home</a>
-	<a href="/task/index">Tasks</a>
+	<button><a href="/">Home</a></button>
+	<button><a href="/task/list">Tasks</a></button>
 </nav>

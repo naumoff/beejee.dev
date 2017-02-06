@@ -49,32 +49,59 @@ use PDO;
  * @package App\Models
  */
 class ModelUser extends \Core\Model{
-	
-	public $userID;
-	public $userName;
+
+	public static $userID;
+	public static $userName;
+	public static $userEmail;
 	
 	/**
-	 * ModelUser constructor.
-	 * @param $userID
-	 * @param $userName
+	 * function return logged in user id.
+	 * if static $usderID is empty in checks $_SESSION['userID']
+	 * @return bool | integer
 	 */
-	public function __construct($userID, $userName) {
-		$this-&gt;userID = $userID;
-		$this-&gt;userName = $userName;
+	public static function getUserID() {
+		if(empty(self::$userID) &amp;&amp; isset($_SESSION['userID'])){
+			self::$userID = $_SESSION['userID'];
+			return self::$userID;
+		}else if(!empty(self::$userID)){
+			return self::$userID;
+		}else{
+			return false;
+		}
 	}
 	
 	/**
-	 * @return integer
+	 * function returns logged in user name.
+	 * if static $usderName is empty it checks $_SESSION['userName']
+	 * @return bool | string
 	 */
-	public function getUserID() {
-		return $this-&gt;userID;
+	public static function getUserName()
+	{
+		if(empty(self::$userName) &amp;&amp; isset($_SESSION['userName'])){
+			self::$userName = $_SESSION['userName'];
+			return self::$userName;
+		}else if(!empty(self::$userName)){
+			return self::$userName;
+		}else{
+			return false;
+		}
 	}
 	
 	/**
-	 * @return string
+	 * function return loggin in user email.
+	 * if static $userEmail is empty it checks $_SESSION['userEmail']
+	 * @return bool | string
 	 */
-	public function getUserName() {
-		return $this-&gt;userName;
+	public static function getUserEmail()
+	{
+		if(empty(self::$userEmail) &amp;&amp; isset($_SESSION['userEmail'])){
+			self::$userEmail = $_SESSION['userEmail'];
+			return self::$userEmail;
+		}else if(!empty(self::$userEmail)){
+			return self::$userEmail;
+		}else{
+			return false;
+		}
 	}
 	
 	/**
@@ -164,6 +191,7 @@ class ModelUser extends \Core\Model{
 		if(!empty($result)){
 			$_SESSION['userID'] = $result['id'];
 			$_SESSION['userName'] = $result['user'];
+			$_SESSION['userEmail'] = $_POST['email'];
 			return TRUE;
 		}else{
 			return FALSE;

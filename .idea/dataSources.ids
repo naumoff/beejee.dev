@@ -65,33 +65,36 @@
         <data-type>bigint(15)|0</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="20" parent="8" name="user_id">
+      <column id="20" parent="8" name="n">
+        <data-type>int(15)|0</data-type>
+      </column>
+      <column id="21" parent="8" name="user_id">
         <mandatory>1</mandatory>
         <data-type>int(15)|0</data-type>
       </column>
-      <column id="21" parent="8" name="task">
+      <column id="22" parent="8" name="task">
         <mandatory>1</mandatory>
         <data-type>varchar(250)|0</data-type>
       </column>
-      <column id="22" parent="8" name="date">
+      <column id="23" parent="8" name="date">
         <mandatory>1</mandatory>
         <data-type>date|0</data-type>
       </column>
-      <column id="23" parent="8" name="pictures">
+      <column id="24" parent="8" name="pictures">
         <data-type>varchar(250)|0</data-type>
       </column>
-      <column id="24" parent="8" name="status">
+      <column id="25" parent="8" name="status">
         <data-type>enum(&apos;Open&apos;, &apos;Cancelled&apos;, &apos;Postponed&apos;, &apos;Completed&apos;)|0</data-type>
       </column>
-      <index id="25" parent="8" name="user_id">
+      <index id="26" parent="8" name="user_id">
         <columns>user_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="26" parent="8" name="PRIMARY">
+      <key id="27" parent="8" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="27" parent="8" name="task_ibfk_1">
+      <foreign-key id="28" parent="8" name="task_ibfk_1">
         <columns>user_id</columns>
         <ref-key>~.user.user</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>

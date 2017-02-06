@@ -34,8 +34,45 @@
         />
     </head>
     <body>
-        <pre class="brush: php">&lt;h3&gt;Wellcome to your personal project list, &lt;b&gt;&lt;?= $user ?&gt;&lt;/b&gt; !&lt;/h3&gt;
-</pre>
+        <pre class="brush: php">&lt;h4&gt;My Task List&lt;/h4&gt;
+&lt;table border=&quot;1&quot;&gt;
+&lt;?php foreach ($data AS $key=&gt;$value){ ?&gt;
+	&lt;tr&gt;
+	&lt;?php if($key == 0) {?&gt;
+		&lt;?php foreach ($value AS $column =&gt; $data) { ?&gt;
+			&lt;th&gt;&lt;?= $column ?&gt;&lt;/th&gt;
+		&lt;?php } ?&gt;
+	&lt;?php } ?&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;?php foreach ($value AS $data){?&gt;
+			&lt;td&gt; &lt;?= $data ?&gt;&lt;/td&gt;
+		&lt;?php } ?&gt;
+	&lt;/tr&gt;
+&lt;?php } ?&gt;
+&lt;/table&gt;
+&lt;div id=&quot;addTask&quot;&gt;&lt;/div&gt;
+&lt;br&gt;
+&lt;button id=&quot;showForm&quot;&gt;Add New Task&lt;/button&gt;
+&lt;button id=&quot;cancellTask&quot;&gt;Cancell&lt;/button&gt;
+&lt;script&gt;
+	$(document).ready(function(){
+		$('#cancellTask').hide();
+		
+		$('#showForm').on('click',function () {
+			$(&quot;#addTask&quot;).load('/task/add-form');
+			$(&quot;#addTask&quot;).show();
+			$(&quot;#showForm&quot;).hide();
+			$('#cancellTask').show();
+			
+		});
+		$('#cancellTask').on('click',function(){
+			$('#addTask').hide();
+			$('#cancellTask').hide();
+			$('#showForm').show();
+		});
+	});
+&lt;/script&gt;</pre>
         <script type="text/javascript">
              SyntaxHighlighter.all();
              jQuery('.gutter div').each(function(key, data){

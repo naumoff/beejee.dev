@@ -12,7 +12,7 @@
     </parse_markers>
     <source>eJxtkL1uwzAMhOcE6DsQegENXWkBXYoOXTN0lCs6FqAfh6JatE9f2o3RAOn4He8OOOLYRWpx6GFmmgZjjXupmdB6h/Z6fDji/OhOjRieusyV47eXWAtalfU4Vc7g31dJC7r6bKrnWAxkUnsYzFKbGLUecIqUQiNZ4YCJzlSCe13d8Kw1aK/Sdo5l6QLytdBgKPuYDBSf/4Dp0iNTcPBWO8Om4sj34cW39lk57PmV7+K7Cf6taH3MUfYCr38w8OFTV/gdu82zN/sUdJH7ARahdIU=</source>
   </file>
-  <file path="App\Views\Layouts\header.php" generated-path="App.Views.Layouts.header.html" hash="0fee24f058afc6e7357570ab949d9195" package="Default">
+  <file path="App\Views\Layouts\header.php" generated-path="App.Views.Layouts.header.html" hash="a7336136a6f845bc223d79d945bee3b4" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -21,7 +21,7 @@
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
-    <source>eJyzUXTxdw6JDHBVyCjJzbHj5bKB06mJKUCa0yY3tSRRITkjsag4tcRWKTTETddCCSxRklmSk2pnY2+roAJmKtjb2ehDBIH69aEG2CTlp1SC1PNyAQCp6x4c</source>
+    <source>eJw9jksLwjAQhM8K/ocYvJql4kEkbQ8+rnqoB49pGtqUxMRkBfvv7QvZw7czA8Pw9fl2Kp73C2nQmmy15H8qUfVccKtQENmIEBWm9FFctwc6BqjRqIznKdmML8kzDpM5xFEG7ZHEIFPaIPp4BBCt+LLaudoo4XVk0tnRA6PLCO37o0IHCUt2bD8rZvWLtZH21VPhsA3mcbx0VddzuB9owT3O</source>
   </file>
   <file path="Core\Controller.php" generated-path="Core.Controller.html" hash="27feb638f95e74a0a56681e25e319777" package="Default">
     <docblock line="0">
@@ -222,7 +222,7 @@ with an "Action" suffix, e.g. indexAction, showAction etc.</description>
     </parse_markers>
     <source>eJyN0b1OwzAQB/A5lvwOt1WKRPIABdFAI8EQipqWNXLTywckPst2KiTEu2O7S1U6ZPT/7N+d7ftH1SnO0jjmDGKoSTZ9O2lhe5JQD8KYJBRWStRfokXIlPJByhlnUoxoXCGkS59wFs7Ac3Dgh7Mo0JEj1k/QkbHnxeokNBire9mGwHmRa26s21a9bModPMBioFoM/sxieQE5xzee4bxlRe4dpasD4idicK5mmgzqGda+zLfe0kT2FqPctWcw71lZeuY/gSccSI0oLRR0xOQcvzZg9YRwByNphF42BNptFQMeoW8AtSYNKeB3jSp8WieUQmmSi2EORAMKeT1N/lEVm7V/od12n7uBfv8A70uHug==</source>
   </file>
-  <file path="App\Controllers\User.php" generated-path="App.Controllers.User.html" hash="d4eaf6931bd1095347fd48d39d62fd3d" package="App\Controllers">
+  <file path="App\Controllers\User.php" generated-path="App.Controllers.User.html" hash="fd6a1d4228e647b82b09084ded34c871" package="App\Controllers">
     <docblock line="0">
       <description>User Controller</description>
       <long-description></long-description>
@@ -240,15 +240,6 @@ with an "Action" suffix, e.g. indexAction, showAction etc.</description>
         <tag name="package" line="15" description="App\Controllers"/>
         <tag name="inherited_from" description="\Core\Controller" refers="\Core\Controller" link="/classes/Core.Controller.html"/>
       </docblock>
-      <property static="true" visibility="public" namespace="App\Controllers" line="17" package="App\Controllers">
-        <name>$user</name>
-        <full_name>\App\Controllers\User::user</full_name>
-        <default></default>
-        <docblock line="17">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
       <property static="false" visibility="protected" namespace="App\Controllers" line="19" package="Core">
         <name>$route_params</name>
         <full_name>\Core\Controller::route_params</full_name>
@@ -261,61 +252,60 @@ with an "Action" suffix, e.g. indexAction, showAction etc.</description>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="23" package="App\Controllers">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="21" package="App\Controllers">
         <name>registerFormAction</name>
         <full_name>\App\Controllers\User::registerFormAction()</full_name>
-        <docblock line="23">
+        <docblock line="21">
           <description>controller reveals new user registration form.</description>
           <long-description></long-description>
-          <tag name="return" line="23" description="" type="void">
+          <tag name="return" line="21" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="36" package="App\Controllers">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="34" package="App\Controllers">
         <name>registerAction</name>
         <full_name>\App\Controllers\User::registerAction()</full_name>
-        <docblock line="36">
+        <docblock line="34">
           <description>user registration function.</description>
           <long-description>method performs new user check with existing database new user
 registration if everything is ok</long-description>
-          <tag name="return" line="36" description="" type="void">
+          <tag name="return" line="34" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="124" package="App\Controllers">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="122" package="App\Controllers">
         <name>loginFormAction</name>
         <full_name>\App\Controllers\User::loginFormAction()</full_name>
-        <docblock line="124">
+        <docblock line="122">
           <description>Login Form exhibition</description>
           <long-description></long-description>
-          <tag name="return" line="124" description="" type="void">
+          <tag name="return" line="122" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="138" package="App\Controllers">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="135" package="App\Controllers">
         <name>loginAction</name>
         <full_name>\App\Controllers\User::loginAction()</full_name>
-        <docblock line="138">
+        <docblock line="135">
           <description>login function.</description>
-          <long-description>function performs user login and creation of object from ModelUser class
-that contains current userID and userName</long-description>
-          <tag name="todo" line="138" description="finish wrong authentication procedure"/>
-          <tag name="return" line="138" description="" type="void">
+          <long-description>function performs user login and writes to session user id and name</long-description>
+          <tag name="todo" line="135" description="finish wrong authentication procedure"/>
+          <tag name="return" line="135" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="private" namespace="App\Controllers" line="171" package="App\Controllers">
-        <name>userCreation</name>
-        <full_name>\App\Controllers\User::userCreation()</full_name>
-        <docblock line="171">
-          <description>internal function that creates user object from ModelUser class.</description>
-          <long-description>contains user id and user name.</long-description>
-          <tag name="return" line="171" description="" type="\App\Controllers\void;">
-            <type>\App\Controllers\void;</type>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="167" package="App\Controllers">
+        <name>logOutAction</name>
+        <full_name>\App\Controllers\User::logOutAction()</full_name>
+        <docblock line="167">
+          <description>function clear log session and ModelUser static vars (userID and userName).</description>
+          <long-description>And then redirects to Home page.</long-description>
+          <tag name="return" line="167" description="" type="void">
+            <type>void</type>
           </tag>
         </docblock>
       </method>
@@ -410,14 +400,11 @@ with an "Action" suffix, e.g. indexAction, showAction etc.</description>
       </method>
     </class>
     <markers>
-      <todo line="138">finish wrong authentication procedure</todo>
+      <todo line="135">finish wrong authentication procedure</todo>
     </markers>
-    <parse_markers>
-      <error line="17" code="PPC:ERR-50007">No summary for property $user</error>
-    </parse_markers>
-    <source>eJydV1FP4zgQfk6l/gdTVZsWcVvdSfdSrtwiYCUkdhdtl3tZ0MpNXOprGvdshx665b/feGwnTppCAaGA4pnxN59nPk/++HO9WHc7o8PDbocckhvFJDkTuZYiy5jEdx/WNFnSe0ZuT9fr22pRmdVRt9Pt5HTFFFgx0rA47nYK5Rw/iZRlyv4x2/i1MyHZ7V+cbY5NKA/kLKNKIZw6hnYISWlN2L+a5alycStT8l+3E8HvuphlPCFKUw1/+oVFYlZw6wg2SyonyR4YzRTJ2YYYU3hxz5WW4CxyMhdy9d76fJBMFzInD4Kn+GZU7TUv8gTtrTOTH8HvFF8NhogrMvmPxxKQMzmITSKj0Pg9HFJ8ZAyj7/iMYs11xmIyOSHx1wCTs7o7Ih9Pr6YXQ5PbUyO/lkQcQpfMiumFSMmaSZNhkH2yYMmSbLheAM/gzvN7klJNZxRO0lvZGLX4fE6ASPmoF8aDKyKWb6CtThnEHPR/XH+ZfvseKyAuviOTCYm9cezMIkiB0WThjcnplPSX7NEw13+gWcG8YeSimVWItVVB4zGYc0iXDZzjMfo94RMffcPXORAC7t++3lxYgz6TUshPTClTwYAxtu9NBmy11o9lHoa++G5YIQri4Xkeu/eNiD1TMaYLDbcY8qAXgoPGYz7m9q5raJ5fYVvy8yfZXvktBLQT0Taka/DdCJmSOWcZNGRC81xoMmN1gA5hDWLtbB06cgCn28RVOuzGtRuYIqtCISCeshzUgGYekwdVR9VCHVtRntUIeg7KNpYL428ZCgiaZTRflgRVaJ5CxvCJjwDkjr23KvAmX+Zik5MV9ApdsgNbkRit7K0q1MQF81nur1ZerkK96oV61TvyBlj72JW1ZijXLdWhgSO/sgiStIbhG2tVE8Yt+rbzNl1ctWOKr91+PrUXoe+BPcKSRotV+vtWZzqrux3tX96p4zEqtPn3M6jBAAEPW73et7thQdb9Ktk4cMUfBgpK/xVlEbD3cmnswfA+FO9XIM0SaRconBtO03QKY0Sh6kdglsI86mzaGmu4NwstihaMGhZ7VyLBIGMyMj6jTNzz/BdTor3h82L1qtMIjmOf89jjQPY6kZYjQaRkQ2HqADH0iFkKuphQMzCKOSmcesHFrkSuDuIyYPPsdkhmcyK6MqwSQwvMNQs+4ybfV0woeCp7TXWl5bMjXQ/Nei+PcmjXHN9KWOUAh8ObtaU53DRAHBoAl2L2N0s0mUuxqoqY4EBto+kF1TgSU57DLV5IyEdjxMtzjFY4tXF8aZEKuNFyrhZkIwXMe7TQC3vBWlRSJCwtJHstwZ5cWC8nQK4U06Vemp3MWPDuHam/wtEQg7xhLsSOxSUIgjodzEP1mdGI98tzY6kspC4qb5s/w+KO+pKpItPGve2jy6oTlrvLe+hn0UHp6tXI4VIsm1u/M1c3A79zS4GrIkmgna+hn2sSU92WtswnJ/HUmlYqZEVkctL/Mb2YTi+/fLayYoorvvN3oJ+6DXUOoW0H+MHvjn8KLhlU7GqdMdfHuDQKNKBy9kKbvSS0bbrBc23m7qwqVNsthifm2u6ZBnP9WjYX2vO07CpiRvqWD8zjqk8kf4Ct/OdsCaN+Wr5h7Eni5QMFYr7XSkCDBueX56DTrefgdejpf0eaevU=</source>
+    <source>eJydV1FPGzkQft5I+Q8miroJ4ojupHsJF64RUB0SLagp91JQZXYNsbJZ52wvOXTlv994bO96NxsIVNW2sr8Zf/N5Zjz548/VfNXtjPb3ux2yT64Vk+RE5FqKLGMS1z6uaLKgD4zcTFerm2pTmd1Rt9Pt5HTJFKAYaSCOup1COcPPImWZsv+YY/zeiZDs5m/O1kfGlSdyklGlkE6dQzuFpEQT9q9meaqc3wpK/ut2IviLB0TgMqm2JHtkNFMkZ2tSKFx44EpLqrnIyb2Qy0Nr81EyXcicPAqe4gqcHa2Ku4wn5L7IE8RbYyY/gd0UlwZDPD0yUY7HEvgxOYgN3VEIPoSriA8MMPqO3yjWXGcsJpNjEn8NODnU7QH5NL2YnQ1Buui5EV9LII6hC2bJ9FykZMWkiTCIPpmzZEHWXM9BTTDn+QNJqaZ3FO7Lo6yPmn9+T0BI+aTnxoIrIhbvkK0uGfgc9H9cXc6+fY8VCBffksmExB4cO1gEITCazD2YTGekv2BPRrn+I80K5oGR82Z2wddGnozHAOcQLhs4wyO0e8YvfvpGr1MQBMy/fb0+s4A+k1LIz0wpk6fAMbbrJgK2XOmnMg4jX3w7rBgF/vA+j9x6w2PPZIypNaMtutzrheSgvJj3uXnqCkrkVziW/PxJNnd+CwltZbRJ6Qps10Km5J6zDMouoXkuNLljdYKOYY1i7W4dO7IHt9vkVRps57WdmCLLQiEhnrJc84RmnpMnVWfVIh1bUp7VBHqJyiaXM2NvFQoEustovigFqtg8h4rhFz8ByS1nb2Tgdb7IxTonS6gVumB7NiPRW1lblauJc+aj3L1b+XYV9qte2K96Bx6AuY9VWSuGct9KHQKc+BUiCNICwxWLqjXGDfk24zZVXJVjisvuPB/aq9R34B5hSiNimf6+UZkOdbul/MuXczzGDm3++wW6wQAJD1utDtvNMCHrdlXb2HPJHzoKUv8NaRGo93pq7KDwLhLvliDNFGlvUH1z/jRNZ5rqQtWvwGyFcdTVtDnWMG8mWhTNGTUq9i5Egk7GZGRsRpl44PkvJkV7w5eb1ZtuI7iOXe5jhwvZ6UZargSZkjWFqQOaoWfMUuiLCTVjobgnhete8LArkau9uHTYvLstLbM5EV0YVYmRBeaaOb/jJt43TCh4KztNdSXyxZGuh7De66Mc4prjW0mrHOBweLNYmqdkLblmimhBFChvkAjgKe6aOcLFrkUq4HXKuZqDkYDZjRZ6bh9Le4IUCUsLyd4qlhcK9stpjivFdNn7zEnmif/wgdSXcMxDJ++Y8bD6cAucYM8NZpv6/Gca8eszYNklSL1BvG+WDBM16kumikwb87afSbbTYOq6uId+rhyUpr6zOF4tGamKJIEsuIICrPWE6nmzeTk5jmcWWrUNW/WT4/6P2dlsdn75xfYB8/bEt/7R8mOy0cfRsPkLf/CHwj8Flwx+dS1XGXOFh1ujoGgrY98Zs9c6Y1uhl0mYZIxiSZQlYFK/1JbAWARJTh6pVGRg/J+fIsKHN3S1NoU1UxEQRgpRJBrL6i8Bo/jKKPq2urgsdLMwitwWRU3g89PYydq6bfW3gC2p03cxhWPiS1DjsgZuuYaeb1HP/wNSqXeU</source>
   </file>
-  <file path="App\Views\User\successPage.php" generated-path="App.Views.User.successPage.html" hash="c07caf3ad6b0473273952c33f389f221" package="Default">
+  <file path="App\Views\User\successPage.php" generated-path="App.Views.User.successPage.html" hash="ad64f4cfe18206e5fc880e4000c71762" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -426,9 +413,9 @@ with an "Action" suffix, e.g. indexAction, showAction etc.</description>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
-    <source>eJyzyTC2C0/NyUnOz01VKMlXyC8tUihJLM7WzU3MS0xPLdJRsLG3VVApLU4tUrC3s9EHKuflAgDmVhCh</source>
+    <source>eJyzyTC2C0/NyUnOz01VKMlXqMwvLVIoSC0qzs9LzFEoKMrPSk0uUcjJLC7RUbBJsrOxt1VQKS1OLVKwt7PRT7JTULTRB5rAywUAk5QW3g==</source>
   </file>
-  <file path="App\Models\ModelUser.php" generated-path="App.Models.ModelUser.html" hash="1a9beea4c25a10f189f838a779c99ed9" package="App\Models">
+  <file path="App\Models\ModelUser.php" generated-path="App.Models.ModelUser.html" hash="e7170fdbfa195b8332f4b3286a9fdec9" package="App\Models">
     <docblock line="0">
       <description>User Model</description>
       <long-description></long-description>
@@ -446,7 +433,7 @@ with an "Action" suffix, e.g. indexAction, showAction etc.</description>
         <tag name="package" line="15" description="App\Models"/>
         <tag name="inherited_from" description="\Core\Model" refers="\Core\Model" link="/classes/Core.Model.html"/>
       </docblock>
-      <property static="false" visibility="public" namespace="App\Models" line="17" package="App\Models">
+      <property static="true" visibility="public" namespace="App\Models" line="17" package="App\Models">
         <name>$userID</name>
         <full_name>\App\Models\ModelUser::userID</full_name>
         <default></default>
@@ -455,11 +442,20 @@ with an "Action" suffix, e.g. indexAction, showAction etc.</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="App\Models" line="18" package="App\Models">
+      <property static="true" visibility="public" namespace="App\Models" line="18" package="App\Models">
         <name>$userName</name>
         <full_name>\App\Models\ModelUser::userName</full_name>
         <default></default>
         <docblock line="18">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="true" visibility="public" namespace="App\Models" line="19" package="App\Models">
+        <name>$userEmail</name>
+        <full_name>\App\Models\ModelUser::userEmail</full_name>
+        <default></default>
+        <docblock line="19">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -509,56 +505,47 @@ with an "Action" suffix, e.g. indexAction, showAction etc.</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Models" line="25" package="App\Models">
-        <name>__construct</name>
-        <full_name>\App\Models\ModelUser::__construct()</full_name>
-        <docblock line="25">
-          <description>ModelUser constructor.</description>
-          <long-description></long-description>
-          <tag name="param" line="25" description="" type="" variable="$userID"/>
-          <tag name="param" line="25" description="" type="" variable="$userName"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$userID</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$userName</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Models" line="33" package="App\Models">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="App\Models" line="26" package="App\Models">
         <name>getUserID</name>
         <full_name>\App\Models\ModelUser::getUserID()</full_name>
-        <docblock line="33">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="33" description="" type="integer">
-            <type>integer</type>
+        <docblock line="26">
+          <description>function return logged in user id.</description>
+          <long-description>if static $usderID is empty in checks $_SESSION['userID']</long-description>
+          <tag name="return" line="26" description="| integer" type="boolean">
+            <type>boolean</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Models" line="40" package="App\Models">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="App\Models" line="42" package="App\Models">
         <name>getUserName</name>
         <full_name>\App\Models\ModelUser::getUserName()</full_name>
-        <docblock line="40">
-          <description></description>
-          <long-description></long-description>
-          <tag name="return" line="40" description="" type="string">
-            <type>string</type>
+        <docblock line="42">
+          <description>function returns logged in user name.</description>
+          <long-description>if static $usderName is empty it checks $_SESSION['userName']</long-description>
+          <tag name="return" line="42" description="| string" type="boolean">
+            <type>boolean</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="App\Models" line="49" package="App\Models">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="App\Models" line="59" package="App\Models">
+        <name>getUserEmail</name>
+        <full_name>\App\Models\ModelUser::getUserEmail()</full_name>
+        <docblock line="59">
+          <description>function return loggin in user email.</description>
+          <long-description>if static $userEmail is empty it checks $_SESSION['userEmail']</long-description>
+          <tag name="return" line="59" description="| string" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="App\Models" line="76" package="App\Models">
         <name>checkUserName</name>
         <full_name>\App\Models\ModelUser::checkUserName()</full_name>
-        <docblock line="49">
+        <docblock line="76">
           <description>function checks new user login uniqueness.</description>
           <long-description></long-description>
-          <tag name="param" line="49" description="" type="" variable="$data"/>
-          <tag name="return" line="49" description="" type="boolean|string">
+          <tag name="param" line="76" description="" type="" variable="$data"/>
+          <tag name="return" line="76" description="" type="boolean|string">
             <type>boolean</type>
             <type>string</type>
           </tag>
@@ -569,14 +556,14 @@ with an "Action" suffix, e.g. indexAction, showAction etc.</description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="App\Models" line="73" package="App\Models">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="App\Models" line="100" package="App\Models">
         <name>checkUserEmail</name>
         <full_name>\App\Models\ModelUser::checkUserEmail()</full_name>
-        <docblock line="73">
+        <docblock line="100">
           <description>function checks new user email uniqueness.</description>
           <long-description></long-description>
-          <tag name="param" line="73" description="" type="" variable="$data"/>
-          <tag name="return" line="73" description="" type="boolean|string">
+          <tag name="param" line="100" description="" type="" variable="$data"/>
+          <tag name="return" line="100" description="" type="boolean|string">
             <type>boolean</type>
             <type>string</type>
           </tag>
@@ -587,14 +574,14 @@ with an "Action" suffix, e.g. indexAction, showAction etc.</description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="App\Models" line="96" package="App\Models">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="App\Models" line="123" package="App\Models">
         <name>userRegistration</name>
         <full_name>\App\Models\ModelUser::userRegistration()</full_name>
-        <docblock line="96">
+        <docblock line="123">
           <description>function register new user in database</description>
           <long-description></long-description>
-          <tag name="param" line="96" description="" type="" variable="$data"/>
-          <tag name="return" line="96" description="" type="mixed">
+          <tag name="param" line="123" description="" type="" variable="$data"/>
+          <tag name="return" line="123" description="" type="mixed">
             <type>mixed</type>
           </tag>
         </docblock>
@@ -604,14 +591,14 @@ with an "Action" suffix, e.g. indexAction, showAction etc.</description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="App\Models" line="115" package="App\Models">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="App\Models" line="142" package="App\Models">
         <name>userLogin</name>
         <full_name>\App\Models\ModelUser::userLogin()</full_name>
-        <docblock line="115">
+        <docblock line="142">
           <description>function performs new user authorization.</description>
           <long-description></long-description>
-          <tag name="param" line="115" description="" type="" variable="$data"/>
-          <tag name="return" line="115" description="" type="boolean">
+          <tag name="param" line="142" description="" type="" variable="$data"/>
+          <tag name="return" line="142" description="" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
@@ -621,25 +608,27 @@ with an "Action" suffix, e.g. indexAction, showAction etc.</description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="protected" namespace="App\Models" line="23" package="Core">
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="App\Models" line="27" package="Core">
         <name>getDB</name>
         <full_name>\Core\Model::getDB()</full_name>
-        <docblock line="23">
-          <description></description>
+        <docblock line="27">
+          <description>function provides PDO connection to database.</description>
           <long-description></long-description>
+          <tag name="return" line="27" description="of PDO" type="object">
+            <type>object</type>
+          </tag>
         </docblock>
         <inherited_from>\Core\Model</inherited_from>
       </method>
     </class>
     <parse_markers>
-      <error line="33" code="PPC:ERR-50008">No summary for method getUserID()</error>
-      <error line="40" code="PPC:ERR-50008">No summary for method getUserName()</error>
       <error line="17" code="PPC:ERR-50007">No summary for property $userID</error>
       <error line="18" code="PPC:ERR-50007">No summary for property $userName</error>
+      <error line="19" code="PPC:ERR-50007">No summary for property $userEmail</error>
     </parse_markers>
-    <source>eJzNVttu2kAQfQaJf9hESNiRU9RXCDQUHAWJQISheUgQWuwBrBjb2V0rSVP+vXuxweaeqpWKkMjOzM45u3N8nKtv4Tws5MsXF4U8ukBDCgTdBQ54cnkdYvsZzwA9NcLwScapSJQL+ULexwugvADQOlkt5CMKqBkQUJE4cN/qVcWeBKfpYUoVkIDMgm1h2dlqBG8MfIeipzXORyGf498wmniujYock7Rb1Y1IlzOuqkJJJMdR113twKeMRDYLyBeV44wIXiTdtmOin4yW10DTyLeZG/hoPF411OIOxnqbjgTjXJHNXXpZV2lUSxNP58SOJJscYrlxkGsCLCI+cn0GM3Gle3jNgA0liBZziPdlqBwC4Gdy/dmx/oLmfoR9h1h1sedgP1PkwysS9cgLZq6PIt99icAHSjcm5GCGsywnQeD92k2VMszSjCXWirPspfNqNSD64n3lV39umR2zOUCuI6L8c9Pv3Ulq8frh1uybimsNVcTvuZyibOJMeFDBVir8glrfNV3NWARhAT4T43Uml/WQAD8TpyGAN4su6xPXd+7FmbWSBCkZ6vCPJbkabe+AN7AjBgngWmqpmikwe67xh7RSuTEHzdtxw7J6TbXDnSbyRWe1GrppdCxTl3eTKwIhAbnj4xCPLb8k+Ry9umyOhDmgq0n9I8NueVWe1BH2CGDnnT/GLmX0TN3TSiTpnjKz5EYAH+kayUHlPqMhWGDX+9caMgXIDhGdriFFk4tI/pFSUVorKeurVLaEc1g3su9aOGr53yhHHT8lnZjfX9LOFPPIce0QmHEAzmmlHm4/gs8EUzimm4X7Bs4xxYimfYlCsAjs0Uy7a5n9AWp3Bz3FI9aKJhaGvBsj5K9Hw+YXw8DR4/yPRmdoWkiTLmGomRsVWdntPWi6fr5tQCeJSvRrOI7F90V0Qw2JYjAh+F2TTGKbqtUzRmDEOTXbVTIedZIVbNdJuRqJlK6oJFPPMDr4VgmBTAOySHkCjtg8IO5POYKTDOGUuXbE2+qYCRjpea6sIF7vsoKcSjW6LSTuQsTFbzzIP3zHnGQVxfF9zxocsIr0Hjmn1RY1taPmQoBGHvuEucQGcwaLkL1r8X49sZexZVpWu9dVemu3SiPRWhU9llynNKruKhT/AGRLlVwzLjPoD81TX0zL35mZSp0=</source>
+    <source>eJzNl+9v2jgYx18Hif/BrdBIKnbVvQ2FG0dTrVILFaG3F+upCskDRAtJZjtae1v/97MfO5BAQrNqJ500jcV+fnztz+PH3sUf6Tptt87PztotckbuGVBymwQQ4eeH1PO/eCsgD6M0fcBxJifO2612K/Y2wIQBkN1kv93KGJBxQkGN6IG7y2lf+uR5xpHHmEokU5aTHeTyy9YEnjjEASMPuzzfZXQjzRZR6BPGPS5+OiIzvb7sV09MhPyaKWfjhVK5If6gYkPIW2axz8MkJhR4RmMSJasVBCSMiXQhYfCbsguXhViBFEBCRmCT8mdp7K/B/8JI59F1XPd6OvncVSq7fyv3Dzr8Ikki8kN4cFjJDTJwJ/bUbjWtgN9jGNMiYisMI1yamNJkEC1tW2+FRd69E2oYcLNCgGWhq1FyIYMqrX001FJL9jjzItiB2AnzpEqETnPcu2Sz9MSImhN/vRwnw/bRyEKtgSOLoICH1+CRZjWAGKdhvGrIR8YxLWFWy0ha1FNSOio44ToOSCnzOlb5AThGC+XU8ipHeDsxBCZo5cBAnr8qYvpoNiCGdr8CGQY6zgxN6qFpKRXU1GIOsGmHOm7b7nQMnNJUS24vxlvQ6X2P4ZuCJhhKfnH4NYMYGNP8RFen3oZ0Ao97hzR+NGOBubYHCGNtiXTY1+h3sYmnrnPjjOeiEeNiDONqNr1Fafr700dn5iitA2LL31NcJQYJFmJQpbVtgf7yT9Pqq/BiEDYQcwkqWLwfphTEmoQMmXjf6P1wEcbBnVyz2cUk3Z5avGIr6uDAA57AzzjkCXd9t2CzBO6vTXGN2vaVMx9/fBy57nSsPEQB5E4ngwG5Gt24jibfAUoTeitwyItVbBLen99CvsauSC4Ww+8ldS8X54sh8SIKXvAsLtqQcXZyWirFUsyaGkINP19DePD/6xpSJ/qwiJrXEOhza+M/ClVUrJXC40Qcuv3COV43GHdXOKA7yP+kctTyC6Wj9f2i2ml8daxEAnm959Uj2o/Us/AYvFY3m/AJgtcqRgadYRbqyYGamrmeuM5sTq4n86nSoWvFlB893JteKh6wPV9sDIfA0vN/jW7uHZeY2CV6innPRsvJ9JNpWaeHDahRUcl4oyBwhV/G9qohrxiPUu/ZRCW6TQ2GpUbQ03OK7XZSo85npdrdJH7JO9ewlJSceklR/xjVFOgyoZtCT/Ayvk5o+A8iaNQQmnC9kbfVa02gV+S5bQX6u6oVGGpqNLkkci/kuPzVIN94xzRqFZ3Hu6k7P9Iqij7IaeuiqL3aXCiwLOI/0Vx0g9FvE+2fP0kq/k8hQyujz90wyN8/lU/aoqkq10pj/ZDCF1Zpe0o9aT67d5peYy//Am6AesM=</source>
   </file>
-  <file path="Core\Model.php" generated-path="Core.Model.html" hash="2a43ce27d9380bf87686ce36a7d6311b" package="Default">
+  <file path="Core\Model.php" generated-path="Core.Model.html" hash="b6381d27a3d209ddc19cc590ca43974d" package="Default">
     <docblock line="0">
       <description>Base Model Class File</description>
       <long-description></long-description>
@@ -701,26 +690,28 @@ with an "Action" suffix, e.g. indexAction, showAction etc.</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="true" visibility="protected" namespace="Core" line="23" package="Core">
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="Core" line="27" package="Core">
         <name>getDB</name>
         <full_name>\Core\Model::getDB()</full_name>
-        <docblock line="23">
-          <description></description>
+        <docblock line="27">
+          <description>function provides PDO connection to database.</description>
           <long-description></long-description>
+          <tag name="return" line="27" description="of PDO" type="object">
+            <type>object</type>
+          </tag>
         </docblock>
       </method>
     </class>
     <parse_markers>
-      <error line="23" code="PPC:ERR-50008">No summary for method getDB()</error>
       <error line="17" code="PPC:ERR-50007">No summary for property $host</error>
       <error line="18" code="PPC:ERR-50007">No summary for property $dbname</error>
       <error line="19" code="PPC:ERR-50007">No summary for property $username</error>
       <error line="20" code="PPC:ERR-50007">No summary for property $password</error>
       <error line="21" code="PPC:ERR-50007">No summary for property $db</error>
     </parse_markers>
-    <source>eJxtkE9vgkAQxc+S8B0mpAc1Vq8N1LYINO1BMUCTHkzMCouSItDdoaYxfvfushL/1IQDM++3b+bN43O1qXRt1O/rGvRhQjiFaZnQHJyccA6vWU6lMtI1XSvIlvKKxBScklFLtmrBz13fUn8Lu6oWTlmk2bpRW1vl1fg29Ysw+SJr5XO0JyuOjMQI8QmGva51xFex7IcgBY4EsxjuNiVHGIOaZJruZPnmh5F1g0xWculLdmZPvVusSMD+0x+hF9yiK7HlrmTJJT23w1DRJdIYaXK2idWGuZLSuogxKwtYU3Qn3Z5gZO6Okk1TPBVDCrqTl+4a21/+nZvyBGNjyGmeCkJWQ8NSaU9tVQsh3hDGKY5rTB+MwVFt87Z1m6hnXU2/fxJvbUSWrWqkXbGFadpRFCy9IJj6rjeApnWslt6n482jd3+mjBjFmhVw5ifbh+YYhz9b5cJ8</source>
+    <source>eJx1kU1v2kAQhs+25P8wQj0ASuFa2aWNAVftgYCASj1EQuv1GNw6u+7uOFFU5b931muapKWSbXlmnnnn6/3H5tRE4XQ8jkIYw1xYhJUusIZFLayFT1WNLjKNwihU4g5tIyTCQhtMnKtlfrNcJ/7vNm2a24VWZXXsomdZr9XpdvY1i/wQR6/Ty4vckhGSQD7D8CsKA34aU90LQrAkqJLw5qQtwQx8pThezg+f17t9coEsctf0a/YmXWWXWJ7A/Et/3WXbS3TDXT5oU7ymN+lu52lNKAmLF50kfphuKQFvoWyVpEorYPi+KtC6TYLUSqH3k4ZCkMj5KBOfcm2QWqNA59+ZAV26lC40vVT0T4Uj0nI+HDHjNhpU5dBiXcYxdwWVYlpJ9GKjDgj6Ol6n41z3wRPWFj3xIsQrUPjgsoeDu0f7s47dgWaDSV/EWZNB4m/x7PY2B+RJGIs0a6l8N7jqo+drnO3zvkfJ3+XffuDklMhUeUs45DbiON3vt4dsu12tl9kVdK7eOmTfFtlm/2V90yv9b1T+8Pv0Gwn18Z0=</source>
   </file>
-  <file path="App\Views\Home\index.php" generated-path="App.Views.Home.index.html" hash="f7332ec890bd800d98fe3bf78b0bb257" package="Default">
+  <file path="App\Views\Home\index.php" generated-path="App.Views.Home.index.html" hash="8869f3d3933cef68183da6d3bb02d443" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -729,7 +720,7 @@ with an "Action" suffix, e.g. indexAction, showAction etc.</description>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
-    <source>eJyzyTCyC0/NyUnOz01VtNEH8ni5bDJM7AJyUhOLUxVy8tMz8xTyixSKUtMzi0tSixRK8hWS8/NKMvNKwepNQOoTFTKKUtNslfRLi1OL9MF6dNPyi3KV7HxAbBv9RExVMAOhCoOgXIhaXi4A1zMxTw==</source>
+    <source>eJx1jz8LwjAQxWcFv8NZOihYAtIxSXHQqajo4BzLtQ2kTcmfSfzutqEiSLvdO97v3j2adXUHstzEwrsaGGNwOuT34/YFGV8tF7Te8wcqVegG15T0KixTflUoLILSlWxBGzBYSevQgNNQ6NbJ1gcgDcDTO6dbTgXUBksWEW/RkAAnpTZNxPNhpkRwSkbzPPfNGtHbKP9oGqq9UVmcKLMDmjGIh3tn0WBv+NWb/TbR3oVX4eLddFxI+gA2l2vB</source>
   </file>
   <file path="App\Controllers\Admin\Users.php" generated-path="App.Controllers.Admin.Users.html" hash="720aec095f78255449e54a8fac759d30" package="Default">
     <docblock line="0">
@@ -1286,7 +1277,7 @@ it's passed through to the $_SERVER variable).</long-description>
     </parse_markers>
     <source>eJyNVFFr2zAQfnYg/+EWAnFCsN+blXXr+lC2QUm7MVhGUOyzLWZLRpLThZD/vpNkJ+5CaB9kZOm77z6dPt37D3VRDwfxbDYcwAw+MY2w5fgMGS/RLsXDwXAgWIW6ZgnCrVS4sEtdxC0Ko1gJtyXTGn5QaOTWH5Tc8hQ1ZI1IDJcCjASFIkUFhalKl0A76I2RqYQUE8LDc8GMhdLKMzcFJI02snpgNN0yxdnGy4IbkvOH5V7RUWhyVAH74SBwIgOLpljQRnGRw7hHWdsPZfNLYLCqS2ZINReuDCRfliTZsVCGoFZ8SwDiYoYnfa7FxXwFMnvqLlf72+W6SO1xl2mNrL+haI683f+rxC3wMnMmpekEt/NXST3OcvZpl/7C2clTUZuvZopVx4xu2xR4PEzPgz04U4rtYMxUrmmeNxWZT1OM1ph2UW2AQtMoukTJ05PmZlOS1lby0ZjelaETMffs179+06yy5byGp+X3uymFW0cFGsvs6qrvoWtIubIvJFyvP98v1+tpNFl9rOuVtaFerSaRY7alCcZ0PiqToKBJvIqjWcwni0u0tcJ8rZDqnmDYRc5hMpnDGXzqWOyI49Zhc+sIcGdgIu0ukmrFc0FF72VtHfnKQb6ynWyMXnl0RH3jhfTOfm9kIbiVdkbTynwji0efSOzAv9SQEhO6i5zf/Xxarh+/3D/4Co2tp4h9FEUx0cWOLt67GzqMFkDVU0hG51t0fYGai1WCiZFqZwl4FnJNt8JS24pCxzedOmsEXCRlQz3sRVkXfisLnZ2m4KH/Y3tvMggOL9hcCqfM9c1ECkO2h0xRw/LPxLUoyFHAZuf2lSxL17TO8pyeaXDAUqNXg0khYbR3mQ4gJLHLRqTvRh5IHxqHfxHP5rk=</source>
   </file>
-  <file path="App\Views\Layouts\footer.php" generated-path="App.Views.Layouts.footer.html" hash="2f2076a60569c8f33b6c9d674f8f92c0" package="Default">
+  <file path="App\Views\Layouts\footer.php" generated-path="App.Views.Layouts.footer.html" hash="9aca73d28649b755b4a8b75e87fcd8aa" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1295,23 +1286,24 @@ it's passed through to the $_SERVER variable).</long-description>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
-    <source>eJyz0U/KT6m04+Wy0c8oyc0BMni5ADtBBPs=</source>
+    <source>eJyz0U/KT6m04+Wy0c8oyc0BMgAxVQTk</source>
   </file>
-  <file path="App\Controllers\Home.php" generated-path="App.Controllers.Home.html" hash="032dc38b3bc8a6b44dd32d5217984616" package="Default">
+  <file path="App\Controllers\Home.php" generated-path="App.Controllers.Home.html" hash="5effcadfc33c486341cd21a76faaee37" package="Default">
     <docblock line="0">
       <description>Home controller</description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
+    <namespace-alias name="ModelUser">\App\Models\ModelUser</namespace-alias>
     <namespace-alias name="View">\Core\View</namespace-alias>
-    <class final="false" abstract="false" namespace="App\Controllers" line="14" package="App\Controllers">
+    <class final="false" abstract="false" namespace="App\Controllers" line="15" package="App\Controllers">
       <extends>\Core\Controller</extends>
       <name>Home</name>
       <full_name>\App\Controllers\Home</full_name>
-      <docblock line="14">
+      <docblock line="15">
         <description>Class Home</description>
         <long-description></long-description>
-        <tag name="package" line="14" description="App\Controllers"/>
+        <tag name="package" line="15" description="App\Controllers"/>
         <tag name="inherited_from" description="\Core\Controller" refers="\Core\Controller" link="/classes/Core.Controller.html"/>
       </docblock>
       <property static="false" visibility="protected" namespace="App\Controllers" line="19" package="Core">
@@ -1326,36 +1318,36 @@ it's passed through to the $_SERVER variable).</long-description>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="20" package="App\Controllers">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="21" package="App\Controllers">
         <name>indexAction</name>
         <full_name>\App\Controllers\Home::indexAction()</full_name>
-        <docblock line="20">
+        <docblock line="21">
           <description>Show index page for Home controller.</description>
           <long-description></long-description>
-          <tag name="return" line="20" description="" type="void">
+          <tag name="return" line="21" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="33" package="App\Controllers">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="46" package="App\Controllers">
         <name>before</name>
         <full_name>\App\Controllers\Home::before()</full_name>
-        <docblock line="33">
+        <docblock line="46">
           <description>Before filter.</description>
           <long-description></long-description>
-          <tag name="return" line="33" description="" type="void">
+          <tag name="return" line="46" description="" type="void">
             <type>void</type>
           </tag>
           <tag name="inherited_from" description="\Core\Controller::before()" refers="\Core\Controller::before()" link="/classes/Core.Controller.html#method_before"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="42" package="App\Controllers">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="55" package="App\Controllers">
         <name>after</name>
         <full_name>\App\Controllers\Home::after()</full_name>
-        <docblock line="42">
+        <docblock line="55">
           <description>After filter</description>
           <long-description></long-description>
-          <tag name="return" line="42" description="" type="void">
+          <tag name="return" line="55" description="" type="void">
             <type>void</type>
           </tag>
           <tag name="inherited_from" description="\Core\Controller::after()" refers="\Core\Controller::after()" link="/classes/Core.Controller.html#method_after"/>
@@ -1451,9 +1443,9 @@ with an "Action" suffix, e.g. indexAction, showAction etc.</description>
         <inherited_from>\Core\Controller</inherited_from>
       </method>
     </class>
-    <source>eJyVkNFOwjAUhq+7ZO/QEJNthMA9IDIXjCZGL5Z4I4aM7uAaR9t0nZAQnsELX4Rwa3yH+Ua2BSfKhfGiTfv3P985f/tnIhOu02k2XQc38SWfAyacKcnzHKTROq7jOiyZQyESAjgUYhzVhqLnOmUBWEsSxncUFj1j/8JFeVIUFmqvQ014Sh6PIHUbUvsxLBWwtNiTo4ORVq6DbAOkkXHGF5iyFJZYGPKMy98h2jvnUIIqJcPPnKZW0R2RKKc5JXhWMqIoZztSaM9+YBohIBnHjb6QMGj0jCAkZWoi/ZNJPIrjq9ubwMome7cr9cwgfc+M0LGwtv5fr2Uc6N7uyFNU5eCdDrzqtXqrNtW2eq82Hy9710MLX4TX8chi13odxj0HHVCnpLn6I5jkCoiC9Dvb1Nb6gX5dmc8+goczDd2z/4dOTOVP8voTccqssg==</source>
+    <source>eJy1Uj1OwzAUnh0pd/BQKUmF2j2l0BBAIAEDpSyUIU1eW4s0jmyHVqp6BgYuUrEi7hBuhO380EIFYmCJ7e89fz953j9Mp6lptJtN08BNfEZngEOaCEbjGJjC2qZhGkkwA54GIWAvTYd+3cA7ppFxwEMFX9IIYl4sAw6sqvmUwfCWwLyjqCopPw4414L62JPsD8Hkm0BtIaz7MSwEJBEvmf0Nu0vTQFoAScr+lM4xSSJY4FQxjyn7GrBVdPYYiIwl+JGSSCNSEaXZKCYhHmdJKAhNCiZP721HCSEytncGd90JCLU5P7Yd3O3iU++if1LcQY0gE1NcYh0NqX/jukxmAmZbymJbi7XkbKw93YLuigVZgogYrO6BlT/nr/k6f8nf8vX7U9WHLMUv61qnwO73SgdabiW9wraXm+tBaaUhJ8au5LQl+nM21WQ7/x2gBitfqlDt63TKfxlOPRX1RZsv4Qjk7OUDILH4ZeaMCggFRJ9jH+m7tiOry53k3liSltx/ow7UzW3m1QfCgAaw</source>
   </file>
-  <file path="App\Views\Layouts\topmenu.php" generated-path="App.Views.Layouts.topmenu.html" hash="f3f3d16a7dccdc2e09aaf11cc44bbc97" package="Default">
+  <file path="App\Views\Layouts\topmenu.php" generated-path="App.Views.Layouts.topmenu.html" hash="00b60600237d20bcdb4efcfb74355a9a" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1462,7 +1454,337 @@ with an "Action" suffix, e.g. indexAction, showAction etc.</description>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
-    <source>eJyzyUsss+Pl4rRJVMgoSk2zVdJXsvPIz0210U9EFS7ILy4p1s/MS0mtULILAHEgSmz0ISYAAP0qFPI=</source>
+    <source>eJyzyUsss+Pl4rRJKi0pyc+zs0lUyChKTbNV0ley88jPTbXRT7Sz0YdKYlVXklicrZ+TWVyiZBcCZBaj6bDRh9gAAMjAILM=</source>
+  </file>
+  <file path="App\Controllers\Task.php" generated-path="App.Controllers.Task.html" hash="b22be39eb4d58ec97fdd4ccc61cf5011" package="App\Controllers">
+    <docblock line="0">
+      <description>Task Controller file</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="\App\Controllers"/>
+    </docblock>
+    <namespace-alias name="ModelTask">\App\Models\ModelTask</namespace-alias>
+    <namespace-alias name="ModelUser">\App\Models\ModelUser</namespace-alias>
+    <namespace-alias name="Controller">\Core\Controller</namespace-alias>
+    <namespace-alias name="View">\Core\View</namespace-alias>
+    <class final="false" abstract="false" namespace="App\Controllers" line="15" package="App\Controllers">
+      <extends>\Core\Controller</extends>
+      <name>Task</name>
+      <full_name>\App\Controllers\Task</full_name>
+      <docblock line="15">
+        <description>Class Controller</description>
+        <long-description></long-description>
+        <tag name="package" line="15" description="\App\Controllers"/>
+        <tag name="inherited_from" description="\Core\Controller" refers="\Core\Controller" link="/classes/Core.Controller.html"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="App\Controllers" line="17" package="App\Controllers">
+        <name>$userID</name>
+        <full_name>\App\Controllers\Task::userID</full_name>
+        <default></default>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="App\Controllers" line="18" package="App\Controllers">
+        <name>$userName</name>
+        <full_name>\App\Controllers\Task::userName</full_name>
+        <default></default>
+        <docblock line="18">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="App\Controllers" line="19" package="App\Controllers">
+        <name>$userEmail</name>
+        <full_name>\App\Controllers\Task::userEmail</full_name>
+        <default></default>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="App\Controllers" line="19" package="Core">
+        <name>$route_params</name>
+        <full_name>\Core\Controller::route_params</full_name>
+        <default>array()</default>
+        <docblock line="19">
+          <description>Parameters from the matched routes</description>
+          <long-description></long-description>
+          <tag name="var" line="19" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="24" package="App\Controllers">
+        <name>__construct</name>
+        <full_name>\App\Controllers\Task::__construct()</full_name>
+        <docblock line="24">
+          <description>Task constructor.</description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\Core\Controller::__construct()" refers="\Core\Controller::__construct()" link="/classes/Core.Controller.html#method___construct"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="34" package="App\Controllers">
+        <name>listAction</name>
+        <full_name>\App\Controllers\Task::listAction()</full_name>
+        <docblock line="34">
+          <description>function reveals to do list for current user</description>
+          <long-description></long-description>
+          <tag name="return" line="34" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="44" package="App\Controllers">
+        <name>addFormAction</name>
+        <full_name>\App\Controllers\Task::addFormAction()</full_name>
+        <docblock line="44">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="52" package="App\Controllers">
+        <name>addTaskAction</name>
+        <full_name>\App\Controllers\Task::addTaskAction()</full_name>
+        <docblock line="52">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="26" package="Core">
+        <name>__construct</name>
+        <full_name>\Core\Controller::__construct()</full_name>
+        <docblock line="26">
+          <description>Controller constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="26" description="&lt;p&gt;Parameters from the route&lt;/p&gt;" type="array" variable="$route_params">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="26" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$route_params</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="41" package="Core">
+        <name>__call</name>
+        <full_name>\Core\Controller::__call()</full_name>
+        <docblock line="41">
+          <description>Magic method called when a non-existent or inaccessible method is
+called on an object of this class. Used to execute before and after
+filter methods on action methods. Action methods need to be named
+with an "Action" suffix, e.g. indexAction, showAction etc.</description>
+          <long-description></long-description>
+          <tag name="param" line="41" description="&lt;p&gt;Method name&lt;/p&gt;" type="string" variable="$name">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="41" description="&lt;p&gt;arguments passed to method&lt;/p&gt;" type="array" variable="$arguments">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="41" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$arguments</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="59" package="Core">
+        <name>before</name>
+        <full_name>\Core\Controller::before()</full_name>
+        <docblock line="59">
+          <description>Before filter - called before an action method.</description>
+          <long-description></long-description>
+          <tag name="return" line="59" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="67" package="Core">
+        <name>after</name>
+        <full_name>\Core\Controller::after()</full_name>
+        <docblock line="67">
+          <description>After filter - called after an action method.</description>
+          <long-description></long-description>
+          <tag name="return" line="67" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="App\Controllers" line="71" package="Core">
+        <name>validate</name>
+        <full_name>\Core\Controller::validate()</full_name>
+        <docblock line="71">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type/>
+        </argument>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="15" code="PPC:ERR-50005">No summary for class \App\Controllers\Task</error>
+      <error line="44" code="PPC:ERR-50008">No summary for method addFormAction()</error>
+      <error line="52" code="PPC:ERR-50008">No summary for method addTaskAction()</error>
+      <error line="17" code="PPC:ERR-50007">No summary for property $userID</error>
+      <error line="18" code="PPC:ERR-50007">No summary for property $userName</error>
+      <error line="19" code="PPC:ERR-50007">No summary for property $userEmail</error>
+    </parse_markers>
+    <source>eJyFlG1P2zAQx18nUr7DTapwWjH6Plk7KgbSJGCTCnsDqDLJlVp148h2ChXqd58f0kBN2dSqTe5+5/vfQ/Lte72ok3g4GCQxDOCGqiWciUpLwTlKmDOOznFa02JJnxDuJ3V9/0Yo6x0mcRJXdIXKUAgBkSdxo9rAK1EiV/7P5vrMd6tQtr4zIfHdcbsIZ/7D8Dm3ye2n4FQpXwG+aKxK1VJvwa9JHJlvLdmaaoSeOUn+/JGHpmtTygfj+YoynvsDXLuiXb8KUSktm0ILeeLMQxvbPHJWwLypCs1EBbNZh6V9sEKinl4w9XXsRcAIusqz7An1rTOn/TwPWKvuIG0dhg9wp/sg7zw+YBvU1cmWuEbKFWgBpQDOlIa5kFA0UmKlwSbwEacSdSMrWAtWftoEGz9xl2nfuH0XSqrpTp/tZ6fP3lyaiHSvUb5AO/ksMxpKlCmx5JCZ65cTs87k2BLRnfuNiGaaIxmNgVxtQBtStUBEbGoCxuVEOOPD+36E+mlZXgi5Cks4IMbmseg/9JBJWboFIj7x8cXkcnr+n/SWD9OzOaRfcFXrTdqb/f41vbkjqnlcMU0e+nB0BKERRiMgU7pG0i5iZEaKtFhAGw+TKfSWuBmNe2vKG+x7KmoPsi5zyLv3RJYZjpkeYtpGuCG5OrowkvkBWgGwN9L8I2Z3OQR3j2WAujUO2e5pNbCve6qpbtT+orHKoPoan+1tW7yXvvVT2P4FU4+FqQ==</source>
+  </file>
+  <file path="App\Models\ModelTask.php" generated-path="App.Models.ModelTask.html" hash="bfa8b4f9e896756c209322b50c58e3e4" package="App\Models">
+    <docblock line="0">
+      <description>Task Model file</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="\App\Models"/>
+    </docblock>
+    <namespace-alias name="Model">\Core\Model</namespace-alias>
+    <namespace-alias name="PDO">\PDO</namespace-alias>
+    <class final="false" abstract="false" namespace="App\Models" line="12" package="App\Models">
+      <extends>\Core\Model</extends>
+      <name>ModelTask</name>
+      <full_name>\App\Models\ModelTask</full_name>
+      <docblock line="12">
+        <description>Class Model</description>
+        <long-description></long-description>
+        <tag name="package" line="12" description="\App\Models"/>
+        <tag name="inherited_from" description="\Core\Model" refers="\Core\Model" link="/classes/Core.Model.html"/>
+      </docblock>
+      <property static="true" visibility="private" namespace="App\Models" line="17" package="Core">
+        <name>$host</name>
+        <full_name>\Core\Model::host</full_name>
+        <default>\App\Config::DB_HOST</default>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="true" visibility="private" namespace="App\Models" line="18" package="Core">
+        <name>$dbname</name>
+        <full_name>\Core\Model::dbname</full_name>
+        <default>\App\Config::DB_NAME</default>
+        <docblock line="18">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="true" visibility="private" namespace="App\Models" line="19" package="Core">
+        <name>$username</name>
+        <full_name>\Core\Model::username</full_name>
+        <default>\App\Config::DB_USER</default>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="true" visibility="private" namespace="App\Models" line="20" package="Core">
+        <name>$password</name>
+        <full_name>\Core\Model::password</full_name>
+        <default>\App\Config::DB_PASS</default>
+        <docblock line="20">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="true" visibility="protected" namespace="App\Models" line="21" package="Core">
+        <name>$db</name>
+        <full_name>\Core\Model::db</full_name>
+        <default></default>
+        <docblock line="21">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="App\Models" line="20" package="App\Models">
+        <name>getUserTaskList</name>
+        <full_name>\App\Models\ModelTask::getUserTaskList()</full_name>
+        <docblock line="20">
+          <description>function that return precise user's task list in array.</description>
+          <long-description>or false, if user not authorized.</long-description>
+          <tag name="param" line="20" description="" type="" variable="$userID"/>
+          <tag name="return" line="20" description="| array" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$userID</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="App\Models" line="40" package="App\Models">
+        <name>insertNewTask</name>
+        <full_name>\App\Models\ModelTask::insertNewTask()</full_name>
+        <docblock line="40">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="App\Models" line="27" package="Core">
+        <name>getDB</name>
+        <full_name>\Core\Model::getDB()</full_name>
+        <docblock line="27">
+          <description>function provides PDO connection to database.</description>
+          <long-description></long-description>
+          <tag name="return" line="27" description="of PDO" type="object">
+            <type>object</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Core\Model</inherited_from>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="12" code="PPC:ERR-50005">No summary for class \App\Models\ModelTask</error>
+      <error line="40" code="PPC:ERR-50015">Argument $data is missing from the Docblock of insertNewTask</error>
+      <error line="40" code="PPC:ERR-50008">No summary for method insertNewTask()</error>
+    </parse_markers>
+    <source>eJyFU21P2zAQ/pxI+Q8nhJS0KvA9BbbSBtEJkqktTNOYkJtcqYXrZLGzsTH++86O+7KiaVLl2M/dc69PT99VyyrwT7rdwIcuzJh6gpuyQAELLtBi7yuWP7FHhPtBVd1bozKGk8APfMlWqMgBYWvsB36jEIZljS3igI+jrG84gZ8LplSbx2bEZ42yUHC/5cBL4Hv0s5V5VMaikbnmpQS9ZBpq1E0toaox5xSawtehAm2CCa40cAmsrtnP45Zc1rBgQmEP+MI6gyw1sEYvy5r/wsK5Uas1W8Gh8RiPHOZSzctSwO82qrVQ/17VzAXPQWmm6bMp8RH1LYUwvV1TNZEL2CGGacvjiw1k395hMYczFyaOiT66iDr91qS+CbKF0+Q6Gc5s8cfm6LVXXDEuerbzY+m+5nDXgml014rn1Agq9zTJGmVTXE6yGwva1zhNkwl8yMapzWCxLG1JBnjgBdVjk/PCWj9dJZNkjZAtdng2GVGki8+uunDdEGXGFUpNrtT40TltkQaPkWm1s+90dD7nsrhjosEopMhhbz26t574jHmjcTM66rYRNs2O0wJ1vhwIEZEe4/gymQ2vHgbTaTZ0LLdvR7bYK6kaX3atVk2tjY7XVqv/UAOXVK9O8YfRQ3RIK2F/KcEAX0LVzFdch1/hzCybfcfQaaMhut732hPHOJ0mkxmM01m2XaTnRbJVCa2s3XoPWkFstdDKoOMId4Pr22QaxbIXr3mx5cWWF294seOtd2r1a/+4b+T7v22vh+hhvizh4JTs5weWXNVc6ofajay/43OycSLm6x9uu2Ua</source>
+  </file>
+  <file path="App\Views\Task\index.php" generated-path="App.Views.Task.index.html" hash="c1cacc2739d27f0b8ae2e1b4c6ff8920" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJyFUctugzAQPLdS/2FFkDBSG1qptxhQVKmntpf2BxzbCAuCIzCJIpR/r71ASlLUXvzYnZ2Z3aX5c/J+hC/WFPCmGkMjG7i7pYZtSgkbXQtZx96T52LpLt9BpmvJeA7EF8wwWH+CX8hjnPh7VrYy7CC10BtqarywRGXEYSCO4TGEDgE312xYjnRcl+22gjgBlLAVPaetMXlC0/gMSRMa2dAP3WlQv/hEg5f++kMY1bqzlkgAxbBPlBIzUj37NGZDbnjuJdQelIg9JoSbsGdJbMhlNli1aY3RFUKaXB9edb31krUQ8CEPuBMa9ZArMGcVl2XZc770nym04bXaGefPJ0LzdisrEy5tx+JIsrbiRumKhJ3rxifBYkIXhMtcCUnClUuOgNGczdrCgJeKF8H9yATE7giH5hNvMfYaLkvNBAnsNJoistGHDBlWM0jHTyaZ8zAu3Mx4nRa649S/fwNnbA8DQPBgJfhP7zo7GczESu8CTxoNu/gGXOfwRw==</source>
+  </file>
+  <file path="App\Views\Task\taskForm.php" generated-path="App.Views.Task.taskForm.html" hash="c6ad60b5b087cdaf6d7225196e389367" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJydUktOwzAQXbcSd7C8YIdSCYRE5URCIJZQqVzAiafUwrGNPWnaPWfggJyEcT6lUNQFG+uN580bz/OI9VVxqxR7hJY9y/jKHlyoRUa3Z1OxIsxkhdrZnGdI6UwqdZEAZzXg2qmcexeRE3siVhqMioApmAgDL2BVQQXMkngqYqtOfMgk1uf7x/zcltH/OoS2vkGGOw85t01dQuDMypqiueUs4s4QbLXC9fxm5recBXhrdABVMFGGTjuN04sLhC3KAHKU6CdgwbUx55eEKmcIXc8OdEQ2Vn1L3kuE+fEDFV3vn9cFHXuJEps48CMYqHAkxS7V0ybC+WQx20jTUPLJg+VFOkXWZ/6k3UlbgTGgeLGHJwsW9FHe2VSwh6c7uNobwK7DCH8UiKyfqjdoNOnYn9iUtcbRoTEauizlhszTtEkxof9ILAJsNLS9ih+CbiWzg52kgNaPwNn0C9S89ko=</source>
   </file>
   <package name="App" full_name="App">
     <package name="Controllers" full_name="App\Controllers">

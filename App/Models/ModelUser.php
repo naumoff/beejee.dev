@@ -16,6 +16,7 @@ class ModelUser extends \Core\Model{
 
 	public static $userID;
 	public static $userName;
+	public static $userEmail;
 	
 	/**
 	 * function return logged in user id.
@@ -35,7 +36,7 @@ class ModelUser extends \Core\Model{
 	
 	/**
 	 * function returns logged in user name.
-	 * if static $usderName is empty in checks $_SESSION['userName']
+	 * if static $usderName is empty it checks $_SESSION['userName']
 	 * @return bool | string
 	 */
 	public static function getUserName()
@@ -45,6 +46,23 @@ class ModelUser extends \Core\Model{
 			return self::$userName;
 		}else if(!empty(self::$userName)){
 			return self::$userName;
+		}else{
+			return false;
+		}
+	}
+	
+	/**
+	 * function return loggin in user email.
+	 * if static $userEmail is empty it checks $_SESSION['userEmail']
+	 * @return bool | string
+	 */
+	public static function getUserEmail()
+	{
+		if(empty(self::$userEmail) && isset($_SESSION['userEmail'])){
+			self::$userEmail = $_SESSION['userEmail'];
+			return self::$userEmail;
+		}else if(!empty(self::$userEmail)){
+			return self::$userEmail;
 		}else{
 			return false;
 		}
@@ -137,6 +155,7 @@ class ModelUser extends \Core\Model{
 		if(!empty($result)){
 			$_SESSION['userID'] = $result['id'];
 			$_SESSION['userName'] = $result['user'];
+			$_SESSION['userEmail'] = $_POST['email'];
 			return TRUE;
 		}else{
 			return FALSE;

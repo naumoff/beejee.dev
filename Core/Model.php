@@ -20,11 +20,18 @@ abstract class Model {
 	private static $password = Config::DB_PASS;
 	protected static $db;
 	
+	/**
+	 * function provides PDO connection to database.
+	 * @return object of PDO
+	 */
 	protected static function getDB()
 	{
-		static::$db = new PDO("mysql:host=".self::$host.";dbname=".self::$dbname.";charset=utf8",self::$username,self::$password);
-		static::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		return static::$db;
+		if(self::$db instanceof PDO){
+			return static::$db;
+		}else{
+			static::$db = new PDO("mysql:host=".self::$host.";dbname=".self::$dbname.";charset=utf8",self::$username,self::$password);
+			static::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			return static::$db;
+		}
 	}
-	
 }

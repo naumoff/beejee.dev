@@ -36,61 +36,57 @@
     <body>
         <pre class="brush: php">&lt;?php
 /**
- * Home controller
+ * Task Model file
+ * @package \App\Models
  */
 
-namespace App\Controllers;
-use \App\Models\ModelUser;
-use \Core\View;
+namespace App\Models;
+use Core\Model;
+use PDO;
 
-/**
- * Class Home
- * @package App\Controllers
- */
 
-class Home extends \Core\Controller
-{
+class ModelTask extends \Core\Model {
+	
 	/**
-	 * Show index page for Home controller.
-	 * @return void
+	 * function that return precise user's task list in array.
+	 * or false, if user not authorized.
+	 * @param $userID
+	 * @return bool | array
 	 */
-	public function indexAction(){
-		if(\App\Models\ModelUser::getUserID() == FALSE){
-			$auth = FALSE;
-			View::render('Home/index.php',
-				[
-					'title'=&gt;'Главная',
-					'auth'=&gt;$auth
-				], FALSE);
+	public static function getUserTaskList($userID)
+	{
+		if($userID){
+			$db = static::getDB();
+			$sql = 'SELECT user.user, user.email, task.n, task.task, task.date, task.pictures, task.status
+			FROM task
+			INNER JOIN user
+			ON task.user_id = user.id
+			WHERE user.id = :id
+			ORDER BY task.n';
+			$statement = $db-&gt;prepare($sql);
+			$statement-&gt;bindValue(':id',$userID);
+			$statement-&gt;execute();
+			$result = $statement-&gt;fetchAll(PDO::FETCH_ASSOC);
+			return $result;
 		}else{
-			$auth = TRUE;
-			$userName = \App\Models\ModelUser::getUserName();
-			View::render('Home/index.php',
-				[
-					'title'=&gt;'Главная',
-					'auth'=&gt;$auth,
-					'userName'=&gt;$userName
-				], TRUE);
+			return false;
 		}
-
 	}
 	
-	/**
-	 * Before filter.
-	 * @return void
-	 */
-	protected function before()
+	public static function insertNewTask($data)
 	{
+		if($data['submit'] == 'Save'){
+			unset($data['submit']);
+			$sql = 'INSERT INTO task
+					(n, user_id, task, date, pictures, status)
+					VALUES(:n,:user_id,:task,:date,:pictures,:status)';
+			$db = Model::getDB();
+			$statement = $db-&gt;prepare($sql);
 
-	}
-	
-	/**
-	 * After filter
-	 * @return void
-	 */
-	protected function after()
-	{
-
+		}
+		echo &quot;&lt;pre&gt;&quot;;
+		print_r($data);
+		echo &quot;&lt;/pre&gt;&quot;;
 	}
 }</pre>
         <script type="text/javascript">
