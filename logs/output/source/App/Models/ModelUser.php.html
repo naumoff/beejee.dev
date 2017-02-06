@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+/**
+ * User Model
+ * @package \App\Models
+ */
+
+namespace App\Models;
+use Core\Model;
+use PDO;
+
+/**
+ * Class ModelUser
+ * @package App\Models
+ */
+class ModelUser extends \Core\Model{
+	
+	public $userID;
+	public $userName;
+	
+	/**
+	 * ModelUser constructor.
+	 * @param $userID
+	 * @param $userName
+	 */
+	public function __construct($userID, $userName) {
+		$this-&gt;userID = $userID;
+		$this-&gt;userName = $userName;
+	}
+	
+	/**
+	 * @return integer
+	 */
+	public function getUserID() {
+		return $this-&gt;userID;
+	}
+	
+	/**
+	 * @return string
+	 */
+	public function getUserName() {
+		return $this-&gt;userName;
+	}
+	
+	/**
+	 * function checks new user login uniqueness.
+	 * @param $data
+	 * @return bool|string
+	 */
+	public static function checkUserName($data)
+	{
+		$sql1 = &quot;SELECT id
+					FROM user
+					WHERE user = :user&quot;;
+		
+		$db = static::getDB();
+		$statement = $db-&gt;prepare($sql1);
+		$statement-&gt;bindParam(':user', $data['user']);
+		$statement-&gt;execute();
+		$userID = $statement-&gt;fetch(PDO::FETCH_ASSOC);
+		if($userID !== FALSE){
+			$errorMessage = &quot;User with name &lt;b&gt;{$data['user']}&lt;/b&gt; already exists!&quot;;
+			return $errorMessage;
+		}else{
+			return FALSE;
+		}
+	}
+	
+	/**
+	 * function checks new user email uniqueness.
+	 * @param $data
+	 * @return bool|string
+	 */
+	public static function checkUserEmail($data)
+	{
+		$sql = &quot;SELECT id
+					FROM user
+					WHERE email = :email&quot;;
+		
+		$statement = \Core\Model::$db-&gt;prepare($sql);
+		$statement-&gt;bindParam(':email', $data['email']);
+		$statement-&gt;execute();
+		$userID = $statement-&gt;fetch(PDO::FETCH_ASSOC);
+		if($userID !== FALSE){
+			$errorMessage = &quot;User with email &lt;b&gt;{$data['email']}&lt;/b&gt; already exists!&quot;;
+			return $errorMessage;
+		}else{
+			return false;
+		}
+	}
+	
+	/**
+	 * function register new user in database
+	 * @param $data
+	 * @return mixed
+	 */
+	public static function userRegistration($data)
+	{
+		$sql = &quot;INSERT INTO user 
+					(user,email,pass,created)
+					VALUES (:user,:email,:pass,NOW())&quot;;
+		$statement = \Core\Model::$db-&gt;prepare($sql);
+		$userAddStatus = $statement-&gt;execute(array(
+			':user'=&gt;$data['user'],
+			':email'=&gt;$data['email'],
+			':pass'=&gt;$data['pass']
+		));
+		return $userAddStatus;
+	}
+	
+	/**
+	 * function performs new user authorization.
+	 * @param $data
+	 * @return bool
+	 */
+	public static function userLogin($data)
+	{
+		$sql = &quot;SELECT id, user 
+				FROM user 
+				WHERE email = :email	
+				AND pass = :pass&quot;;
+		$db = static::getDB();
+		$statement = $db-&gt;prepare($sql);
+		$statement-&gt;bindParam(':email',$_POST['email']);
+		$statement-&gt;bindParam(':pass',$_POST['pass']);
+		$statement-&gt;execute();
+		$result = $statement-&gt;fetch(PDO::FETCH_ASSOC);
+		
+		if(!empty($result)){
+			$_SESSION['userID'] = $result['id'];
+			$_SESSION['userName'] = $result['user'];
+			return TRUE;
+		}else{
+			return FALSE;
+		}
+	}
+}</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

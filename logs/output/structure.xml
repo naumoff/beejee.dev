@@ -1,0 +1,1484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title=" framework " version="2.8.5">
+  <partials/>
+  <file path="App\Views\User\loginForm.php" generated-path="App.Views.User.loginForm.html" hash="489eb21d769884cd1a70afb0ea2ca5e6" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJxtkL1uwzAMhOcE6DsQegENXWkBXYoOXTN0lCs6FqAfh6JatE9f2o3RAOn4He8OOOLYRWpx6GFmmgZjjXupmdB6h/Z6fDji/OhOjRieusyV47eXWAtalfU4Vc7g31dJC7r6bKrnWAxkUnsYzFKbGLUecIqUQiNZ4YCJzlSCe13d8Kw1aK/Sdo5l6QLytdBgKPuYDBSf/4Dp0iNTcPBWO8Om4sj34cW39lk57PmV7+K7Cf6taH3MUfYCr38w8OFTV/gdu82zN/sUdJH7ARahdIU=</source>
+  </file>
+  <file path="App\Views\Layouts\header.php" generated-path="App.Views.Layouts.header.html" hash="0fee24f058afc6e7357570ab949d9195" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJyzUXTxdw6JDHBVyCjJzbHj5bKB06mJKUCa0yY3tSRRITkjsag4tcRWKTTETddCCSxRklmSk2pnY2+roAJmKtjb2ehDBIH69aEG2CTlp1SC1PNyAQCp6x4c</source>
+  </file>
+  <file path="Core\Controller.php" generated-path="Core.Controller.html" hash="27feb638f95e74a0a56681e25e319777" package="Default">
+    <docblock line="0">
+      <description>Base Controller file</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="true" namespace="Core" line="13" package="Core">
+      <extends/>
+      <name>Controller</name>
+      <full_name>\Core\Controller</full_name>
+      <docblock line="13">
+        <description>Class Controller</description>
+        <long-description></long-description>
+        <tag name="package" line="13" description="Core"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Core" line="19" package="Core">
+        <name>$route_params</name>
+        <full_name>\Core\Controller::route_params</full_name>
+        <default>array()</default>
+        <docblock line="19">
+          <description>Parameters from the matched routes</description>
+          <long-description></long-description>
+          <tag name="var" line="19" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="26" package="Core">
+        <name>__construct</name>
+        <full_name>\Core\Controller::__construct()</full_name>
+        <docblock line="26">
+          <description>Controller constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="26" description="&lt;p&gt;Parameters from the route&lt;/p&gt;" type="array" variable="$route_params">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="26" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$route_params</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="41" package="Core">
+        <name>__call</name>
+        <full_name>\Core\Controller::__call()</full_name>
+        <docblock line="41">
+          <description>Magic method called when a non-existent or inaccessible method is
+called on an object of this class. Used to execute before and after
+filter methods on action methods. Action methods need to be named
+with an "Action" suffix, e.g. indexAction, showAction etc.</description>
+          <long-description></long-description>
+          <tag name="param" line="41" description="&lt;p&gt;Method name&lt;/p&gt;" type="string" variable="$name">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="41" description="&lt;p&gt;arguments passed to method&lt;/p&gt;" type="array" variable="$arguments">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="41" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$arguments</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Core" line="59" package="Core">
+        <name>before</name>
+        <full_name>\Core\Controller::before()</full_name>
+        <docblock line="59">
+          <description>Before filter - called before an action method.</description>
+          <long-description></long-description>
+          <tag name="return" line="59" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Core" line="67" package="Core">
+        <name>after</name>
+        <full_name>\Core\Controller::after()</full_name>
+        <docblock line="67">
+          <description>After filter - called after an action method.</description>
+          <long-description></long-description>
+          <tag name="return" line="67" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="Core" line="71" package="Core">
+        <name>validate</name>
+        <full_name>\Core\Controller::validate()</full_name>
+        <docblock line="71">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="71" code="PPC:ERR-50015">Argument $data is missing from the Docblock of validate</error>
+      <error line="71" code="PPC:ERR-50008">No summary for method validate()</error>
+    </parse_markers>
+    <source>eJylVNtq20AQfZbB/zA1hsghkT/AdZsL6VMDhdKnNIj1auTdVt4Vu6vYJfjfO3vxRY4phL4YaXXmzJk5Z/3xcyva4WB6eTkcwCXcMYtwr5UzumnQQC0b9B+mw8FwoNgKbcu4Rxic+aNd3X3DrD0qDIc3hP3NlhG+Z2EL6wzjDvibmtfhIAuMGVV/Y4b6OTQWaqNX4ATCijkusAKjO4c24m5emAFmDPsT3qlH1hrtkDsCjgOybD2XhTk8PZPs7LjN0bBcK5LWcadNkbhDYWQ/4TonLwBSpUHXGQUvWlYHXd2ikRzqTnEntYKy3LfMe+wTAvtlZGMnpL3+dDJFD+sH2p4M9ciW1IfkCV0BZzRdBWuBChgora5xI61D5UAbkIpxjtbKRYO7CplWmypJKVOgF79op6Br8JqiewX8sARwGnCDnDTBAmsym/AVsNp5Uz0RxYieE70NhHED6aSA2947KIy0CwSfurhCWEsnvJRRRI/AdnUtN1eAxbKgSSrcxC9XYIVeJ050PNrZ85TWLtUSxp4eHuPc/vmc8cwsuxXty8LhqaXxo8ao+X2202Lz0PrqiP3gevJhHuUVF3GSC291Jus8fi6DjTYPGSGeeDqZBAoPS+GJluQT+DCfw5fbr98fEiTzMsrOoim9tjJMmz9FvkT33BM4i3WJOBicp0MfwWyLjUUin07pBLnQMEqrfU18Wwqgg1p3FBCp/JXb3b5RsURXhlhF5YnYCaPXFIg1/HzYcGz9JvL30MIpbyTenrk3dzG9Ka7XuwuwD3U/tsW/PN//Be1t3/mQXD7tfeu3+aZ12PH/dk5G9RsfcNYxd5zPF9bIijnMx/TLDqn0b5RJujir9Gl2fO5vVMstLVqgPQcQbtXYFrlkDRfM9DBpknCS/tG2fwH/0gZm</source>
+  </file>
+  <file path="App\Config.php" generated-path="App.Config.html" hash="7be768847b3c92440b1a84a5ddaddade" package="App">
+    <docblock line="0">
+      <description>configuration class.</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="App"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="App" line="10" package="App">
+      <extends/>
+      <name>Config</name>
+      <full_name>\App\Config</full_name>
+      <docblock line="10">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="10" description="App"/>
+      </docblock>
+      <constant namespace="App" line="15" package="App">
+        <name>DB_HOST</name>
+        <full_name>\App\Config::DB_HOST</full_name>
+        <value>'localhost'</value>
+        <docblock line="15">
+          <description>DB host</description>
+          <long-description></long-description>
+          <tag name="var" line="15" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="App" line="20" package="App">
+        <name>DB_NAME</name>
+        <full_name>\App\Config::DB_NAME</full_name>
+        <value>'pr_beejee'</value>
+        <docblock line="20">
+          <description>DB name</description>
+          <long-description></long-description>
+          <tag name="var" line="20" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="App" line="26" package="App">
+        <name>DB_USER</name>
+        <full_name>\App\Config::DB_USER</full_name>
+        <value>'root'</value>
+        <docblock line="26">
+          <description>DB user</description>
+          <long-description></long-description>
+          <tag name="var" line="26" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="App" line="32" package="App">
+        <name>DB_PASS</name>
+        <full_name>\App\Config::DB_PASS</full_name>
+        <value>''</value>
+        <docblock line="32">
+          <description>DB pass</description>
+          <long-description></long-description>
+          <tag name="var" line="32" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="App" line="39" package="App">
+        <name>DEV_MODE</name>
+        <full_name>\App\Config::DEV_MODE</full_name>
+        <value>TRUE</value>
+        <docblock line="39">
+          <description>Development Mode.</description>
+          <long-description>If true - more info revealed if error / exception happens.</long-description>
+          <tag name="var" line="39" description="" type="boolean" variable="">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </constant>
+    </class>
+    <parse_markers>
+      <error line="10" code="PPC:ERR-50005">No summary for class \App\Config</error>
+    </parse_markers>
+    <source>eJyN0b1OwzAQB/A5lvwOt1WKRPIABdFAI8EQipqWNXLTywckPst2KiTEu2O7S1U6ZPT/7N+d7ftH1SnO0jjmDGKoSTZ9O2lhe5JQD8KYJBRWStRfokXIlPJByhlnUoxoXCGkS59wFs7Ac3Dgh7Mo0JEj1k/QkbHnxeokNBire9mGwHmRa26s21a9bModPMBioFoM/sxieQE5xzee4bxlRe4dpasD4idicK5mmgzqGda+zLfe0kT2FqPctWcw71lZeuY/gSccSI0oLRR0xOQcvzZg9YRwByNphF42BNptFQMeoW8AtSYNKeB3jSp8WieUQmmSi2EORAMKeT1N/lEVm7V/od12n7uBfv8A70uHug==</source>
+  </file>
+  <file path="App\Controllers\User.php" generated-path="App.Controllers.User.html" hash="d4eaf6931bd1095347fd48d39d62fd3d" package="App\Controllers">
+    <docblock line="0">
+      <description>User Controller</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="\App\Controllers"/>
+    </docblock>
+    <namespace-alias name="ModelUser">\App\Models\ModelUser</namespace-alias>
+    <namespace-alias name="View">\Core\View</namespace-alias>
+    <class final="false" abstract="false" namespace="App\Controllers" line="15" package="App\Controllers">
+      <extends>\Core\Controller</extends>
+      <name>User</name>
+      <full_name>\App\Controllers\User</full_name>
+      <docblock line="15">
+        <description>Class User</description>
+        <long-description></long-description>
+        <tag name="package" line="15" description="App\Controllers"/>
+        <tag name="inherited_from" description="\Core\Controller" refers="\Core\Controller" link="/classes/Core.Controller.html"/>
+      </docblock>
+      <property static="true" visibility="public" namespace="App\Controllers" line="17" package="App\Controllers">
+        <name>$user</name>
+        <full_name>\App\Controllers\User::user</full_name>
+        <default></default>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="App\Controllers" line="19" package="Core">
+        <name>$route_params</name>
+        <full_name>\Core\Controller::route_params</full_name>
+        <default>array()</default>
+        <docblock line="19">
+          <description>Parameters from the matched routes</description>
+          <long-description></long-description>
+          <tag name="var" line="19" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="23" package="App\Controllers">
+        <name>registerFormAction</name>
+        <full_name>\App\Controllers\User::registerFormAction()</full_name>
+        <docblock line="23">
+          <description>controller reveals new user registration form.</description>
+          <long-description></long-description>
+          <tag name="return" line="23" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="36" package="App\Controllers">
+        <name>registerAction</name>
+        <full_name>\App\Controllers\User::registerAction()</full_name>
+        <docblock line="36">
+          <description>user registration function.</description>
+          <long-description>method performs new user check with existing database new user
+registration if everything is ok</long-description>
+          <tag name="return" line="36" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="124" package="App\Controllers">
+        <name>loginFormAction</name>
+        <full_name>\App\Controllers\User::loginFormAction()</full_name>
+        <docblock line="124">
+          <description>Login Form exhibition</description>
+          <long-description></long-description>
+          <tag name="return" line="124" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="138" package="App\Controllers">
+        <name>loginAction</name>
+        <full_name>\App\Controllers\User::loginAction()</full_name>
+        <docblock line="138">
+          <description>login function.</description>
+          <long-description>function performs user login and creation of object from ModelUser class
+that contains current userID and userName</long-description>
+          <tag name="todo" line="138" description="finish wrong authentication procedure"/>
+          <tag name="return" line="138" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="private" namespace="App\Controllers" line="171" package="App\Controllers">
+        <name>userCreation</name>
+        <full_name>\App\Controllers\User::userCreation()</full_name>
+        <docblock line="171">
+          <description>internal function that creates user object from ModelUser class.</description>
+          <long-description>contains user id and user name.</long-description>
+          <tag name="return" line="171" description="" type="\App\Controllers\void;">
+            <type>\App\Controllers\void;</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="26" package="Core">
+        <name>__construct</name>
+        <full_name>\Core\Controller::__construct()</full_name>
+        <docblock line="26">
+          <description>Controller constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="26" description="&lt;p&gt;Parameters from the route&lt;/p&gt;" type="array" variable="$route_params">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="26" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$route_params</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="41" package="Core">
+        <name>__call</name>
+        <full_name>\Core\Controller::__call()</full_name>
+        <docblock line="41">
+          <description>Magic method called when a non-existent or inaccessible method is
+called on an object of this class. Used to execute before and after
+filter methods on action methods. Action methods need to be named
+with an "Action" suffix, e.g. indexAction, showAction etc.</description>
+          <long-description></long-description>
+          <tag name="param" line="41" description="&lt;p&gt;Method name&lt;/p&gt;" type="string" variable="$name">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="41" description="&lt;p&gt;arguments passed to method&lt;/p&gt;" type="array" variable="$arguments">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="41" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$arguments</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="59" package="Core">
+        <name>before</name>
+        <full_name>\Core\Controller::before()</full_name>
+        <docblock line="59">
+          <description>Before filter - called before an action method.</description>
+          <long-description></long-description>
+          <tag name="return" line="59" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="67" package="Core">
+        <name>after</name>
+        <full_name>\Core\Controller::after()</full_name>
+        <docblock line="67">
+          <description>After filter - called after an action method.</description>
+          <long-description></long-description>
+          <tag name="return" line="67" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="App\Controllers" line="71" package="Core">
+        <name>validate</name>
+        <full_name>\Core\Controller::validate()</full_name>
+        <docblock line="71">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type/>
+        </argument>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+    </class>
+    <markers>
+      <todo line="138">finish wrong authentication procedure</todo>
+    </markers>
+    <parse_markers>
+      <error line="17" code="PPC:ERR-50007">No summary for property $user</error>
+    </parse_markers>
+    <source>eJydV1FP4zgQfk6l/gdTVZsWcVvdSfdSrtwiYCUkdhdtl3tZ0MpNXOprGvdshx665b/feGwnTppCAaGA4pnxN59nPk/++HO9WHc7o8PDbocckhvFJDkTuZYiy5jEdx/WNFnSe0ZuT9fr22pRmdVRt9Pt5HTFFFgx0rA47nYK5Rw/iZRlyv4x2/i1MyHZ7V+cbY5NKA/kLKNKIZw6hnYISWlN2L+a5alycStT8l+3E8HvuphlPCFKUw1/+oVFYlZw6wg2SyonyR4YzRTJ2YYYU3hxz5WW4CxyMhdy9d76fJBMFzInD4Kn+GZU7TUv8gTtrTOTH8HvFF8NhogrMvmPxxKQMzmITSKj0Pg9HFJ8ZAyj7/iMYs11xmIyOSHx1wCTs7o7Ih9Pr6YXQ5PbUyO/lkQcQpfMiumFSMmaSZNhkH2yYMmSbLheAM/gzvN7klJNZxRO0lvZGLX4fE6ASPmoF8aDKyKWb6CtThnEHPR/XH+ZfvseKyAuviOTCYm9cezMIkiB0WThjcnplPSX7NEw13+gWcG8YeSimVWItVVB4zGYc0iXDZzjMfo94RMffcPXORAC7t++3lxYgz6TUshPTClTwYAxtu9NBmy11o9lHoa++G5YIQri4Xkeu/eNiD1TMaYLDbcY8qAXgoPGYz7m9q5raJ5fYVvy8yfZXvktBLQT0Taka/DdCJmSOWcZNGRC81xoMmN1gA5hDWLtbB06cgCn28RVOuzGtRuYIqtCISCeshzUgGYekwdVR9VCHVtRntUIeg7KNpYL428ZCgiaZTRflgRVaJ5CxvCJjwDkjr23KvAmX+Zik5MV9ApdsgNbkRit7K0q1MQF81nur1ZerkK96oV61TvyBlj72JW1ZijXLdWhgSO/sgiStIbhG2tVE8Yt+rbzNl1ctWOKr91+PrUXoe+BPcKSRotV+vtWZzqrux3tX96p4zEqtPn3M6jBAAEPW73et7thQdb9Ktk4cMUfBgpK/xVlEbD3cmnswfA+FO9XIM0SaRconBtO03QKY0Sh6kdglsI86mzaGmu4NwstihaMGhZ7VyLBIGMyMj6jTNzz/BdTor3h82L1qtMIjmOf89jjQPY6kZYjQaRkQ2HqADH0iFkKuphQMzCKOSmcesHFrkSuDuIyYPPsdkhmcyK6MqwSQwvMNQs+4ybfV0woeCp7TXWl5bMjXQ/Nei+PcmjXHN9KWOUAh8ObtaU53DRAHBoAl2L2N0s0mUuxqoqY4EBto+kF1TgSU57DLV5IyEdjxMtzjFY4tXF8aZEKuNFyrhZkIwXMe7TQC3vBWlRSJCwtJHstwZ5cWC8nQK4U06Vemp3MWPDuHam/wtEQg7xhLsSOxSUIgjodzEP1mdGI98tzY6kspC4qb5s/w+KO+pKpItPGve2jy6oTlrvLe+hn0UHp6tXI4VIsm1u/M1c3A79zS4GrIkmgna+hn2sSU92WtswnJ/HUmlYqZEVkctL/Mb2YTi+/fLayYoorvvN3oJ+6DXUOoW0H+MHvjn8KLhlU7GqdMdfHuDQKNKBy9kKbvSS0bbrBc23m7qwqVNsthifm2u6ZBnP9WjYX2vO07CpiRvqWD8zjqk8kf4Ct/OdsCaN+Wr5h7Eni5QMFYr7XSkCDBueX56DTrefgdejpf0eaevU=</source>
+  </file>
+  <file path="App\Views\User\successPage.php" generated-path="App.Views.User.successPage.html" hash="c07caf3ad6b0473273952c33f389f221" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJyzyTC2C0/NyUnOz01VKMlXyC8tUihJLM7WzU3MS0xPLdJRsLG3VVApLU4tUrC3s9EHKuflAgDmVhCh</source>
+  </file>
+  <file path="App\Models\ModelUser.php" generated-path="App.Models.ModelUser.html" hash="1a9beea4c25a10f189f838a779c99ed9" package="App\Models">
+    <docblock line="0">
+      <description>User Model</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="\App\Models"/>
+    </docblock>
+    <namespace-alias name="Model">\Core\Model</namespace-alias>
+    <namespace-alias name="PDO">\PDO</namespace-alias>
+    <class final="false" abstract="false" namespace="App\Models" line="15" package="App\Models">
+      <extends>\Core\Model</extends>
+      <name>ModelUser</name>
+      <full_name>\App\Models\ModelUser</full_name>
+      <docblock line="15">
+        <description>Class ModelUser</description>
+        <long-description></long-description>
+        <tag name="package" line="15" description="App\Models"/>
+        <tag name="inherited_from" description="\Core\Model" refers="\Core\Model" link="/classes/Core.Model.html"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="App\Models" line="17" package="App\Models">
+        <name>$userID</name>
+        <full_name>\App\Models\ModelUser::userID</full_name>
+        <default></default>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="App\Models" line="18" package="App\Models">
+        <name>$userName</name>
+        <full_name>\App\Models\ModelUser::userName</full_name>
+        <default></default>
+        <docblock line="18">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="true" visibility="private" namespace="App\Models" line="17" package="Core">
+        <name>$host</name>
+        <full_name>\Core\Model::host</full_name>
+        <default>\App\Config::DB_HOST</default>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="true" visibility="private" namespace="App\Models" line="18" package="Core">
+        <name>$dbname</name>
+        <full_name>\Core\Model::dbname</full_name>
+        <default>\App\Config::DB_NAME</default>
+        <docblock line="18">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="true" visibility="private" namespace="App\Models" line="19" package="Core">
+        <name>$username</name>
+        <full_name>\Core\Model::username</full_name>
+        <default>\App\Config::DB_USER</default>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="true" visibility="private" namespace="App\Models" line="20" package="Core">
+        <name>$password</name>
+        <full_name>\Core\Model::password</full_name>
+        <default>\App\Config::DB_PASS</default>
+        <docblock line="20">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="true" visibility="protected" namespace="App\Models" line="21" package="Core">
+        <name>$db</name>
+        <full_name>\Core\Model::db</full_name>
+        <default></default>
+        <docblock line="21">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Models" line="25" package="App\Models">
+        <name>__construct</name>
+        <full_name>\App\Models\ModelUser::__construct()</full_name>
+        <docblock line="25">
+          <description>ModelUser constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="25" description="" type="" variable="$userID"/>
+          <tag name="param" line="25" description="" type="" variable="$userName"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$userID</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$userName</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Models" line="33" package="App\Models">
+        <name>getUserID</name>
+        <full_name>\App\Models\ModelUser::getUserID()</full_name>
+        <docblock line="33">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="33" description="" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Models" line="40" package="App\Models">
+        <name>getUserName</name>
+        <full_name>\App\Models\ModelUser::getUserName()</full_name>
+        <docblock line="40">
+          <description></description>
+          <long-description></long-description>
+          <tag name="return" line="40" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="App\Models" line="49" package="App\Models">
+        <name>checkUserName</name>
+        <full_name>\App\Models\ModelUser::checkUserName()</full_name>
+        <docblock line="49">
+          <description>function checks new user login uniqueness.</description>
+          <long-description></long-description>
+          <tag name="param" line="49" description="" type="" variable="$data"/>
+          <tag name="return" line="49" description="" type="boolean|string">
+            <type>boolean</type>
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="App\Models" line="73" package="App\Models">
+        <name>checkUserEmail</name>
+        <full_name>\App\Models\ModelUser::checkUserEmail()</full_name>
+        <docblock line="73">
+          <description>function checks new user email uniqueness.</description>
+          <long-description></long-description>
+          <tag name="param" line="73" description="" type="" variable="$data"/>
+          <tag name="return" line="73" description="" type="boolean|string">
+            <type>boolean</type>
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="App\Models" line="96" package="App\Models">
+        <name>userRegistration</name>
+        <full_name>\App\Models\ModelUser::userRegistration()</full_name>
+        <docblock line="96">
+          <description>function register new user in database</description>
+          <long-description></long-description>
+          <tag name="param" line="96" description="" type="" variable="$data"/>
+          <tag name="return" line="96" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="App\Models" line="115" package="App\Models">
+        <name>userLogin</name>
+        <full_name>\App\Models\ModelUser::userLogin()</full_name>
+        <docblock line="115">
+          <description>function performs new user authorization.</description>
+          <long-description></long-description>
+          <tag name="param" line="115" description="" type="" variable="$data"/>
+          <tag name="return" line="115" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="App\Models" line="23" package="Core">
+        <name>getDB</name>
+        <full_name>\Core\Model::getDB()</full_name>
+        <docblock line="23">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <inherited_from>\Core\Model</inherited_from>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="33" code="PPC:ERR-50008">No summary for method getUserID()</error>
+      <error line="40" code="PPC:ERR-50008">No summary for method getUserName()</error>
+      <error line="17" code="PPC:ERR-50007">No summary for property $userID</error>
+      <error line="18" code="PPC:ERR-50007">No summary for property $userName</error>
+    </parse_markers>
+    <source>eJzNVttu2kAQfQaJf9hESNiRU9RXCDQUHAWJQISheUgQWuwBrBjb2V0rSVP+vXuxweaeqpWKkMjOzM45u3N8nKtv4Tws5MsXF4U8ukBDCgTdBQ54cnkdYvsZzwA9NcLwScapSJQL+ULexwugvADQOlkt5CMKqBkQUJE4cN/qVcWeBKfpYUoVkIDMgm1h2dlqBG8MfIeipzXORyGf498wmniujYock7Rb1Y1IlzOuqkJJJMdR113twKeMRDYLyBeV44wIXiTdtmOin4yW10DTyLeZG/hoPF411OIOxnqbjgTjXJHNXXpZV2lUSxNP58SOJJscYrlxkGsCLCI+cn0GM3Gle3jNgA0liBZziPdlqBwC4Gdy/dmx/oLmfoR9h1h1sedgP1PkwysS9cgLZq6PIt99icAHSjcm5GCGsywnQeD92k2VMszSjCXWirPspfNqNSD64n3lV39umR2zOUCuI6L8c9Pv3Ulq8frh1uybimsNVcTvuZyibOJMeFDBVir8glrfNV3NWARhAT4T43Uml/WQAD8TpyGAN4su6xPXd+7FmbWSBCkZ6vCPJbkabe+AN7AjBgngWmqpmikwe67xh7RSuTEHzdtxw7J6TbXDnSbyRWe1GrppdCxTl3eTKwIhAbnj4xCPLb8k+Ry9umyOhDmgq0n9I8NueVWe1BH2CGDnnT/GLmX0TN3TSiTpnjKz5EYAH+kayUHlPqMhWGDX+9caMgXIDhGdriFFk4tI/pFSUVorKeurVLaEc1g3su9aOGr53yhHHT8lnZjfX9LOFPPIce0QmHEAzmmlHm4/gs8EUzimm4X7Bs4xxYimfYlCsAjs0Uy7a5n9AWp3Bz3FI9aKJhaGvBsj5K9Hw+YXw8DR4/yPRmdoWkiTLmGomRsVWdntPWi6fr5tQCeJSvRrOI7F90V0Qw2JYjAh+F2TTGKbqtUzRmDEOTXbVTIedZIVbNdJuRqJlK6oJFPPMDr4VgmBTAOySHkCjtg8IO5POYKTDOGUuXbE2+qYCRjpea6sIF7vsoKcSjW6LSTuQsTFbzzIP3zHnGQVxfF9zxocsIr0Hjmn1RY1taPmQoBGHvuEucQGcwaLkL1r8X49sZexZVpWu9dVemu3SiPRWhU9llynNKruKhT/AGRLlVwzLjPoD81TX0zL35mZSp0=</source>
+  </file>
+  <file path="Core\Model.php" generated-path="Core.Model.html" hash="2a43ce27d9380bf87686ce36a7d6311b" package="Default">
+    <docblock line="0">
+      <description>Base Model Class File</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="PDO">\PDO</namespace-alias>
+    <namespace-alias name="Config">\App\Config</namespace-alias>
+    <class final="false" abstract="true" namespace="Core" line="15" package="Core">
+      <extends/>
+      <name>Model</name>
+      <full_name>\Core\Model</full_name>
+      <docblock line="15">
+        <description>Class Model</description>
+        <long-description></long-description>
+        <tag name="package" line="15" description="Core"/>
+      </docblock>
+      <property static="true" visibility="private" namespace="Core" line="17" package="Core">
+        <name>$host</name>
+        <full_name>\Core\Model::host</full_name>
+        <default>\App\Config::DB_HOST</default>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="true" visibility="private" namespace="Core" line="18" package="Core">
+        <name>$dbname</name>
+        <full_name>\Core\Model::dbname</full_name>
+        <default>\App\Config::DB_NAME</default>
+        <docblock line="18">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="true" visibility="private" namespace="Core" line="19" package="Core">
+        <name>$username</name>
+        <full_name>\Core\Model::username</full_name>
+        <default>\App\Config::DB_USER</default>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="true" visibility="private" namespace="Core" line="20" package="Core">
+        <name>$password</name>
+        <full_name>\Core\Model::password</full_name>
+        <default>\App\Config::DB_PASS</default>
+        <docblock line="20">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="true" visibility="protected" namespace="Core" line="21" package="Core">
+        <name>$db</name>
+        <full_name>\Core\Model::db</full_name>
+        <default></default>
+        <docblock line="21">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="Core" line="23" package="Core">
+        <name>getDB</name>
+        <full_name>\Core\Model::getDB()</full_name>
+        <docblock line="23">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="23" code="PPC:ERR-50008">No summary for method getDB()</error>
+      <error line="17" code="PPC:ERR-50007">No summary for property $host</error>
+      <error line="18" code="PPC:ERR-50007">No summary for property $dbname</error>
+      <error line="19" code="PPC:ERR-50007">No summary for property $username</error>
+      <error line="20" code="PPC:ERR-50007">No summary for property $password</error>
+      <error line="21" code="PPC:ERR-50007">No summary for property $db</error>
+    </parse_markers>
+    <source>eJxtkE9vgkAQxc+S8B0mpAc1Vq8N1LYINO1BMUCTHkzMCouSItDdoaYxfvfushL/1IQDM++3b+bN43O1qXRt1O/rGvRhQjiFaZnQHJyccA6vWU6lMtI1XSvIlvKKxBScklFLtmrBz13fUn8Lu6oWTlmk2bpRW1vl1fg29Ysw+SJr5XO0JyuOjMQI8QmGva51xFex7IcgBY4EsxjuNiVHGIOaZJruZPnmh5F1g0xWculLdmZPvVusSMD+0x+hF9yiK7HlrmTJJT23w1DRJdIYaXK2idWGuZLSuogxKwtYU3Qn3Z5gZO6Okk1TPBVDCrqTl+4a21/+nZvyBGNjyGmeCkJWQ8NSaU9tVQsh3hDGKY5rTB+MwVFt87Z1m6hnXU2/fxJvbUSWrWqkXbGFadpRFCy9IJj6rjeApnWslt6n482jd3+mjBjFmhVw5ifbh+YYhz9b5cJ8</source>
+  </file>
+  <file path="App\Views\Home\index.php" generated-path="App.Views.Home.index.html" hash="f7332ec890bd800d98fe3bf78b0bb257" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJyzyTCyC0/NyUnOz01VtNEH8ni5bDJM7AJyUhOLUxVy8tMz8xTyixSKUtMzi0tSixRK8hWS8/NKMvNKwepNQOoTFTKKUtNslfRLi1OL9MF6dNPyi3KV7HxAbBv9RExVMAOhCoOgXIhaXi4A1zMxTw==</source>
+  </file>
+  <file path="App\Controllers\Admin\Users.php" generated-path="App.Controllers.Admin.Users.html" hash="720aec095f78255449e54a8fac759d30" package="Default">
+    <docblock line="0">
+      <description>administration file</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="App\Controllers\Admin" line="14" package="App\Controllers\Admin">
+      <extends>\Core\Controller</extends>
+      <name>Users</name>
+      <full_name>\App\Controllers\Admin\Users</full_name>
+      <docblock line="14">
+        <description>Class Users.</description>
+        <long-description>User admin controller</long-description>
+        <tag name="package" line="14" description="App\Controllers\Admin"/>
+        <tag name="inherited_from" description="\Core\Controller" refers="\Core\Controller" link="/classes/Core.Controller.html"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="App\Controllers\Admin" line="19" package="Core">
+        <name>$route_params</name>
+        <full_name>\Core\Controller::route_params</full_name>
+        <default>array()</default>
+        <docblock line="19">
+          <description>Parameters from the matched routes</description>
+          <long-description></long-description>
+          <tag name="var" line="19" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers\Admin" line="20" package="App\Controllers\Admin">
+        <name>before</name>
+        <full_name>\App\Controllers\Admin\Users::before()</full_name>
+        <docblock line="20">
+          <description>Before filter</description>
+          <long-description></long-description>
+          <tag name="return" line="20" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="inherited_from" description="\Core\Controller::before()" refers="\Core\Controller::before()" link="/classes/Core.Controller.html#method_before"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers\Admin" line="30" package="App\Controllers\Admin">
+        <name>indexAction</name>
+        <full_name>\App\Controllers\Admin\Users::indexAction()</full_name>
+        <docblock line="30">
+          <description>Show the index page</description>
+          <long-description></long-description>
+          <tag name="return" line="30" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers\Admin" line="26" package="Core">
+        <name>__construct</name>
+        <full_name>\Core\Controller::__construct()</full_name>
+        <docblock line="26">
+          <description>Controller constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="26" description="&lt;p&gt;Parameters from the route&lt;/p&gt;" type="array" variable="$route_params">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="26" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$route_params</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers\Admin" line="41" package="Core">
+        <name>__call</name>
+        <full_name>\Core\Controller::__call()</full_name>
+        <docblock line="41">
+          <description>Magic method called when a non-existent or inaccessible method is
+called on an object of this class. Used to execute before and after
+filter methods on action methods. Action methods need to be named
+with an "Action" suffix, e.g. indexAction, showAction etc.</description>
+          <long-description></long-description>
+          <tag name="param" line="41" description="&lt;p&gt;Method name&lt;/p&gt;" type="string" variable="$name">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="41" description="&lt;p&gt;arguments passed to method&lt;/p&gt;" type="array" variable="$arguments">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="41" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$arguments</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers\Admin" line="59" package="Core">
+        <name>before</name>
+        <full_name>\Core\Controller::before()</full_name>
+        <docblock line="59">
+          <description>Before filter - called before an action method.</description>
+          <long-description></long-description>
+          <tag name="return" line="59" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers\Admin" line="67" package="Core">
+        <name>after</name>
+        <full_name>\Core\Controller::after()</full_name>
+        <docblock line="67">
+          <description>After filter - called after an action method.</description>
+          <long-description></long-description>
+          <tag name="return" line="67" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="App\Controllers\Admin" line="71" package="Core">
+        <name>validate</name>
+        <full_name>\Core\Controller::validate()</full_name>
+        <docblock line="71">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type/>
+        </argument>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+    </class>
+    <source>eJx9kMFOwzAMhs+NlHfwbdADfQCQWLdHQNx2yVK3jZYmUZLCJLR3xzFl7QUOkSL//j//9strGIMUTV1LATWobjLOpBxVNt5BbyyWeiOFFE5NmILSCG0Ip6N3OXprMaZTW1zPpeeXc7QqJXhPpD5xoXx/6KDvTlb2hLyo4Q/qfbpeiYDXjK5LQO0RNx4pvqSoOENF5AP2pJclctFKaR8xz9HBhzcdV4hdhegz6owd9LPTvPiZrQ+PpBZk1TQwqQtCmgmYR1xWmctWJoH1w0D2Epd7lym9sgnpLtWN3jbZ2+g/GWNch1cItP5/+eazNXoNx6aW/2tC1KOH3ebM3LVbpt++AUDQj78=</source>
+  </file>
+  <file path="App\Views\User\registerForm.php" generated-path="App.Views.User.registerForm.html" hash="8b8644e26338987a3b0c246824971ec4" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJyNksFOwzAMhs9F4h2siMN2ioAbS7srFySExIFjtrptpLYJTgpMiHfHydqp0CHRU/3H/v05jtoNIdi+UBoawioXUhT3tkMldaHkeHh5oZrb4tkjwRPWxgfSwdheSVb5bOsaB6ZaGe8xrK6QyNIDeq9rXK8/Ycs5mXLgw6HFXOxta+kOCEtRqG0OP/I5WUk3mWZfqVhVljrQ+9iTAQfmkJQ4kAR0GBpb5sJZH0RqVRlsS0aJQaZarLEvj/Q0o4foquR4nFJN74YA4eAYM+BHEFGF49frjtXYe64Svg6GR5lJb7odOBN+X0ss5evIcN9YSNEmzScKeLEDQWtr04Pa0ZIFO23aJcxC/ptmsaNYyjRHmBRt5jBJOQ/jtPfvlkoxUsT4Wpx6jwZT1v89buYej1M5Ifa85vM2fth1JkwmnvcopoFP76OYSpWcvQsOePv88w236ez4</source>
+  </file>
+  <file path="Core\Error.php" generated-path="Core.Error.html" hash="409ea3beaba9b0b549651eb50964eb1e" package="Default">
+    <docblock line="0">
+      <description>Error handler class file.</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Config">\App\Config</namespace-alias>
+    <class final="false" abstract="false" namespace="Core" line="14" package="Core">
+      <extends/>
+      <name>Error</name>
+      <full_name>\Core\Error</full_name>
+      <docblock line="14">
+        <description>Class Error.</description>
+        <long-description></long-description>
+        <tag name="package" line="14" description="Core"/>
+      </docblock>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Core" line="24" package="Core">
+        <name>errorHandler</name>
+        <full_name>\Core\Error::errorHandler()</full_name>
+        <docblock line="24">
+          <description>Error exception handler class. Convert all errors to Exceptions by
+throwing an ErrorException object.</description>
+          <long-description></long-description>
+          <tag name="param" line="24" description="" type="" variable="$errLevel"/>
+          <tag name="param" line="24" description="" type="" variable="$errMessage"/>
+          <tag name="param" line="24" description="" type="" variable="$errFile"/>
+          <tag name="param" line="24" description="" type="" variable="$errLine"/>
+          <tag name="throws" line="24" description="" type="\ErrorException">
+            <type>\ErrorException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$errLevel</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$errMessage</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$errFile</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$errLine</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Core" line="36" package="Core">
+        <name>exceptionHandler</name>
+        <full_name>\Core\Error::exceptionHandler()</full_name>
+        <docblock line="36">
+          <description>Exception handler.</description>
+          <long-description></long-description>
+          <tag name="param" line="36" description="&lt;p&gt;The exception&lt;/p&gt;" type="\Core\Exception" variable="$exception">
+            <type>\Core\Exception</type>
+          </tag>
+          <tag name="return" line="36" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$exception</name>
+          <default></default>
+          <type>\Core\Exception</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJyFVM1u2kAQPmOJdxhQDoAoRD0CoY0Sqh4a5RDaExIyZsBunbW1uyatKiSaSFUPfYb2FRJVKGmlNq+wfqPOrjE2P1UPXksz33zz7Tdjd56Fbli0mrVa0YIa9DgPOLg2G/vIwfFtIWDi+djQ2WbRKlrMvkQR2g7CScCxXbQigTA4DsPBScAm3rStQSndiSEwpIYBnlPlO3uaFK85nQwGH4tWwZQX1nLwvYOh9AK2KaxBJGyGXILt+4AaKkAG0EvhAkYfEh7p8uDKY1OwWcK5xkAweouObCQ4ksftSzggslc4Q38neoZCkPyd+AvyaJfCY2nQCBAw2GxukuRAIYxGvueAkLak1yRijtFm7vQyuXNlLaqeV1JPu9fTjlXi0yYWvEnFEAw5hgGXdP1KtXR0BIdVky4YTcDwaltWJc9/WM8a7/Zqa6Y5HfrZmNz2zDYdztIH2XT7LmazXsE5yogzmAXe+L9upaWZY2kk70mypq3Wae/N8Oz8tFeFxA503ADKHfdpN9m6wHEijuNSp0mhcjuPCbuvmWNHU1dmTVtQhgZMUQ7NcuabU7zcaYY7JCuLk8oM/6RLLKtc5Z/FF5K+JJCcvsQWdEKO3T0sfZ0+FheSm+mvuAi7j7Gv94GBx/bp0WNPCICs9mn2+1B6J7Ylz9EXuG2x+hZ/UQ/qTv1StyVQ39Uf9Rgv6LyLb9TP+FotQT2qJYWW6l7dqh/xghL36iG+jr9C/IleCwr/psDn+KaRm9Fc/1D0Of8L/1WSfw==</source>
+  </file>
+  <file path="Core\Router.php" generated-path="Core.Router.html" hash="48e9e338da369585561fb7fbad89da43" package="Default">
+    <docblock line="0">
+      <description>Central Router Class for MVC framework.</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Core" line="13" package="Core">
+      <extends/>
+      <name>Router</name>
+      <full_name>\Core\Router</full_name>
+      <docblock line="13">
+        <description>Class Router</description>
+        <long-description></long-description>
+        <tag name="package" line="13" description="Core"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Core" line="19" package="Core">
+        <name>$routes</name>
+        <full_name>\Core\Router::routes</full_name>
+        <default>array()</default>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="19" description="&lt;p&gt;Assotiative array of routes&lt;/p&gt;" type="array" variable="$routes">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Core" line="24" package="Core">
+        <name>$params</name>
+        <full_name>\Core\Router::params</full_name>
+        <default>array()</default>
+        <docblock line="24">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="24" description="&lt;p&gt;Parameters from matched route.&lt;/p&gt;" type="array" variable="$params">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="32" package="Core">
+        <name>addRoute</name>
+        <full_name>\Core\Router::addRoute()</full_name>
+        <docblock line="32">
+          <description>function that created regEx pattern for routing table.</description>
+          <long-description></long-description>
+          <tag name="param" line="32" description="&lt;p&gt;The Route URL&lt;/p&gt;" type="string" variable="$route">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="32" description="&lt;p&gt;Parameters (controllers, actions, etc)&lt;/p&gt;" type="array" variable="$params">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="32" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$route</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$params</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="59" package="Core">
+        <name>getRoutes</name>
+        <full_name>\Core\Router::getRoutes()</full_name>
+        <docblock line="59">
+          <description>Get all routes from routing table</description>
+          <long-description></long-description>
+          <tag name="return" line="59" description="" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="70" package="Core">
+        <name>matchURL</name>
+        <full_name>\Core\Router::matchURL()</full_name>
+        <docblock line="70">
+          <description>Match the url to the routes in the routing table, setting the $params
+property if a url is found in routing table</description>
+          <long-description></long-description>
+          <tag name="param" line="70" description="&lt;p&gt;The route URL&lt;/p&gt;" type="string" variable="$url">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="70" description="TRUE if match found OR FALSE otherwise" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$url</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="94" package="Core">
+        <name>dispatch</name>
+        <full_name>\Core\Router::dispatch()</full_name>
+        <docblock line="94">
+          <description>method 'dispatch' creates controller object and call for controller object's method</description>
+          <long-description>method dispatch take url and convert it to class name and its method name, then
+creates object based on class name and call its method from created object</long-description>
+          <tag name="param" line="94" description="&lt;p&gt;web path&lt;/p&gt;" type="string" variable="$url">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="94" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$url</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Core" line="128" package="Core">
+        <name>convertToStudlyCaps</name>
+        <full_name>\Core\Router::convertToStudlyCaps()</full_name>
+        <docblock line="128">
+          <description>function converts camel-case to CamelCase.</description>
+          <long-description>used to convert url path to Controller Class name</long-description>
+          <tag name="param" line="128" description="" type="string" variable="$string">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="128" description="returns Controller Class Name" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$string</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Core" line="142" package="Core">
+        <name>convertToCamelCase</name>
+        <full_name>\Core\Router::convertToCamelCase()</full_name>
+        <docblock line="142">
+          <description>function converts camel-case to camelCale.</description>
+          <long-description>used to convert url path to Controler Action name (methods)</long-description>
+          <tag name="param" line="142" description="" type="" variable="$string"/>
+          <tag name="return" line="142" description="returns Controller Action (method) name" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$string</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Core" line="173" package="Core">
+        <name>removeQueryStringVariables</name>
+        <full_name>\Core\Router::removeQueryStringVariables()</full_name>
+        <docblock line="173">
+          <description>Remove the query string variables from the URL (if any).</description>
+          <long-description>As the full query string is used for the route, any variables at the end will need
+to be removed before the route is matched to the routing table. For
+example:
+
+  URL                           $_SERVER['QUERY_STRING']  Route
+  -------------------------------------------------------------------
+  localhost                     ''                        ''
+  localhost/?                   ''                        ''
+  localhost/?page=1             page=1                    ''
+  localhost/posts?page=1        posts&amp;page=1              posts
+  localhost/posts/index         posts/index               posts/index
+  localhost/posts/index?page=1  posts/index&amp;page=1        posts/index
+
+A URL of the format localhost/?page (one variable name, no value) won't
+work however. (NB. The .htaccess file converts the first ? to a &amp; when
+it's passed through to the $_SERVER variable).</long-description>
+          <tag name="param" line="173" description="&lt;p&gt;The full URL&lt;/p&gt;" type="string" variable="$url">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="173" description="The URL with the query string variables removed" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$url</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Core" line="192" package="Core">
+        <name>getParams</name>
+        <full_name>\Core\Router::getParams()</full_name>
+        <docblock line="192">
+          <description>Get the currently matched parameters (controller,action)</description>
+          <long-description></long-description>
+          <tag name="return" line="192" description="$params" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Core" line="197" package="Core">
+        <name>getNamespace</name>
+        <full_name>\Core\Router::getNamespace()</full_name>
+        <docblock line="197">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="197" code="PPC:ERR-50008">No summary for method getNamespace()</error>
+    </parse_markers>
+    <source>eJzFWG1P20gQ/gwS/2FaIdZpQ3ztx6aB4yJandTSNtBKpyRFi7MhPozXZ28IHMp/v5l9s5046aGedAjFye7Ms/M+s357nM2yvd3wxYu9XXgBfZGqnCcwkHMlcugnvChgKnP4+K0P05zfioXMbzpEG+7t7u2muFJkPBLQl7no0pKH0rwGSC/8inQ3/NqQeoSoRva4t7uD/xpjh3jueA48z/kD7OdEU8BJUUgVcxXfCbsjp2D2NA+i7mS5VCJSYuK5ejAcd7eAZxyVK+AzPQSKglrn8hZuuYpmCKNROk34lrEJfzpPIxXLFNSMK4hywYkjF9en95Bxhaek2rYEHqfXoPhVYg8hYyEuFCqnHaMFXMyEsRR8HXyo0W3UIogkelQmCf5oA9fy4BehopYFyIWaoyB3Mp6U+s2vkjgqFeCTiT43MIK0q1oTDrltJwwxdNICNbp1AisJA1I3c/oaulxkCcUMCxmRsBE+4xTYYynsMnw0wuKXePJmNHm5ZMS87wzXQ+5RGLKuXrWItxi+tDMa+Q0tRw8yNPulpQocSBuqjG0rdUtzGkmhVAkFDY4/vy1FPBryw78Pxy9bo5A2jLiVRSf3utiPgadabtCAEEevPNr/rw0txpMjVKi1TaE3wfD7aPkvNBu9/k+U8tws/M6gY352gO2HMSuJ1CwuDo9MKRgamnHPBjFRLVcy971QwJPElhVTCmpZWs8dnX0bk+daKJ08ReBTxfLV5GqS4yOVHywfAuZ5Qj6jr1aoOPW/vFhtKIQyP3HLKmigsGRlIlcPEE+Ba7iYKvs8nRBSk3KmsvgSRCwX7vhKAbK6XEmJ+4Ovp3SALpsW/dMA3p18OD8FiTLli7gQGy2l2RA5oMO8sTBeBUe4oGYuODm3wdA7soq2NPlOPA10KGk0V7G0/PhpCnrRsrQVcLsDvID9G/GAqHqlBZaScOPi0pgjIBIPotOBJBjSMkaW5uzazaV52odVwhfQShTu+MAgO5oVzbWsxIy2ZVOsYMGfyQmwSYwNGY9ntuMUUCY5yKs/sW8BR79EFODUfta2WWHBNHAN3YFjoNyYoNRQMr3D2IJYUYyajk6Tgd6MlYPTa20KzdSAOgGtVFe8wP6IcbCCoCWtwOh0dO3U8DY2TRJvIa6o98ye0OycjvUo1Gg9n7LiVt6JL3ORP5zr077xPKbcKQyXLz0YNJalHtw2dPYrxvfgNpZYucfG3c3k1voX8lzNJ8lDn2coRElIsoThGjP2yJMsG4365XwwGrFOhWjLkVjSztzkF7SgA2tsLhO1Ky/FfVyoulQudyprn0wY9CAViypiULNLy6bKvmlR62Yz685k63TeXn1UIelj0AWWxkGbTKewI5cGwzUZ25ZhXJaANZrDI0sUONilSArh6NUslwut6ej0PhKZpnz+0UT4o2VdUm0uPYTrlQkJUqlMjX3uTzA1o3JO8zEVSJNrG4CfOWRThkrcZtgzabuDHZsd+7KhXPl0s+7AMkXuOIzQH1RFvHPsQDyn2kDVxdYaSkdKbE1bqtP3paOxJJhnvRjYPfOrWAc7c2AN4/+qFvUkNMhlCbEn9ehIP+mwQ9YGBvjh6Lt14nmEd65JCdfdgkUwbBXKTRtmral3/MgZkXFG8gRnoPlODKau44Gp3UWr5pYn+sMCWqxW6eYfOaWS6Rt9sq2aNls+iaZxXqjgicYe6N6hJ7S/qIE4he9cCzENjvaxXUBAA1v60OpUuvFJobenc2yMNQyc6bRvqK/7WbFN/BV4vIzSnsDWuogRIRXCdENy3xUyaQEn+JWmoxKH0N2FuDKLlldXeCdzAyTu+W2WiDcVmUFrs/lv//L8dPDtdDBkX76eDv64PL8Y/H72no3BXHkdyOHP/zmoRGKJn8lCNcrD2CZJGVtDCI9/HiHj16L3qkbXsLQFIcOPYgVGrx004eidDSBhnE7EfZ10ZW1tZyuUl6qydtAgaQXKRrqOGjk18Y43VwzeFZtBIFPhw9sOmanElWQuWrDAWcDOh/TuCmZyITDDOxCc/dbRN5rOTPEoEvSmK0YAXwP1kZThcEzxzuEAFn52jWlMzrA/UDJgN5xfz1xSuEj2MtVyt2FIvXC57G5VjQXxwhaERaxm26qHTd9thfFH46urjlh69AI8w4GRuasQXVkU3V3EfZbICbadA+YuWK9btfkPAhQPPRsYnuEvY+xPPUTq9Xow5ThP+PuVG7AdoR08gIaOFRrGVi9H1cqLNJvu9GS1aJ7nIlXJg69lWePrsradCeu+qL1o23iFwPlYv4PbeOVfe/XQ4KT6kO0bVvnKtcdogq8P8F176dByXuJt1M3ezPORr2oDtbuLlMidtaG65B53mDunei8tua1Wy38AoFeiag==</source>
+  </file>
+  <file path="public\index.php" generated-path="public.index.html" hash="f80115d0856671ac5ad86624948dd666" package="Default">
+    <docblock line="0">
+      <description>Front Controller.</description>
+      <long-description>Front controller (in public folder)</long-description>
+      <tag name="filesource" line="0" description=""/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <source>eJyFU19r2zAQf04g3+EeArKzLH5P124ly9a+bNTdBiMpRrEujYZjeSd5LYR8951kxw6jZS8G3/3+3Ul6977aVaNhMpmMhjCBT2RKBwv+kCkKpNlZNe+qEOkSqnpT6By2plBIccB92OoCrakpR/+fjIYWrdWmzKyT5KL4one6rp0pjFSdR13mjqHgdtKBbLsWgmRT9AGkLi0Q/q7ROlSwKKS1UMo92iZBJUnuwTrS5SOM89DOO1CDIXQ1lfDHaHWKWRXZyTIjfNQsTtG2jRQ1OvFhNByMyRgHl6A0ecEoyz7eplnmJxuMfVbuBcxMJGLGOViuKmSOkVivxRS4Om1zxTMx4+ULT9XbSFuGSiU3BUZBKQ6GAz+sJoRQ89jjaHj0fv0ul0SGLMhSAT7nWPnQFnb8X/g1WHRwmsV2B+My9LQswHhasTCE6yA1n4fWTdMR3izgT9qvcE7tc14fMjW14zStP++o5h3ztkp8giCThkrUshKQSkFAWZ6guRst6+vmFxfeXjEikKJxTcV0HM7exoFcEebaIlTSMcGP3XLPWIKPYiX6ay0ur8SN2aOYChn8fEGXCp/FQ5fqCTdNqlb6ZeVDr3pMDo3aMSzkv2Ct5mv15h9Wu5A9v7tz81fmCsDk5QzTlQjPpeI76ee79th+Pj5nf0r84BDymgj54fvtsg9//eXO7pfpj2W6Enffl+nP7P5bevvls3gI/C6L0mzg8l04mfjiLwZCa8c=</source>
+  </file>
+  <file path="Core\View.php" generated-path="Core.View.html" hash="cc7afd90ccd0106c8ef7c7fbf773fd73" package="Default">
+    <docblock line="0">
+      <description>Base view file</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Core" line="15" package="Core">
+      <extends/>
+      <name>View</name>
+      <full_name>\Core\View</full_name>
+      <docblock line="15">
+        <description>Central Class View.</description>
+        <long-description>Provides function to render html files</long-description>
+        <tag name="todo" line="15" description="decide what to do with customPath variable"/>
+        <tag name="package" line="15" description="Core"/>
+      </docblock>
+      <property static="true" visibility="private" namespace="Core" line="19" package="Core">
+        <name>$customPath</name>
+        <full_name>\Core\View::customPath</full_name>
+        <default></default>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="19" description="&lt;p&gt;path to custom templates in views folder&lt;/p&gt;" type="string" variable="$customPath">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="true" visibility="private" namespace="Core" line="23" package="Core">
+        <name>$header</name>
+        <full_name>\Core\View::header</full_name>
+        <default></default>
+        <docblock line="23">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="23" description="&lt;p&gt;path to header template&lt;/p&gt;" type="string" variable="$header">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="true" visibility="private" namespace="Core" line="27" package="Core">
+        <name>$topMenu</name>
+        <full_name>\Core\View::topMenu</full_name>
+        <default></default>
+        <docblock line="27">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="27" description="&lt;p&gt;path to topMenu template&lt;/p&gt;" type="string" variable="$topMenu">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="true" visibility="private" namespace="Core" line="31" package="Core">
+        <name>$footer</name>
+        <full_name>\Core\View::footer</full_name>
+        <default></default>
+        <docblock line="31">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="31" description="&lt;p&gt;path footer template&lt;/p&gt;" type="string" variable="$footer">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Core" line="39" package="Core">
+        <name>render</name>
+        <full_name>\Core\View::render()</full_name>
+        <docblock line="39">
+          <description>Render a view file.</description>
+          <long-description></long-description>
+          <tag name="param" line="39" description="&lt;p&gt;the path to view file&lt;/p&gt;" type="string" variable="$view">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="39" description="&lt;p&gt;arguments passed to view&lt;/p&gt;" type="array" variable="$args">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="39" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$view</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$args</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$menu</name>
+          <default>TRUE</default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <markers>
+      <todo line="15">decide what to do with customPath variable</todo>
+    </markers>
+    <parse_markers>
+      <error line="39" code="PPC:ERR-50015">Argument $menu is missing from the Docblock of render</error>
+      <error line="39" code="PPC:ERR-50014">Name of argument $menu does not match with the DocBlock's name $args in render()</error>
+    </parse_markers>
+    <source>eJyNVFFr2zAQfnYg/+EWAnFCsN+blXXr+lC2QUm7MVhGUOyzLWZLRpLThZD/vpNkJ+5CaB9kZOm77z6dPt37D3VRDwfxbDYcwAw+MY2w5fgMGS/RLsXDwXAgWIW6ZgnCrVS4sEtdxC0Ko1gJtyXTGn5QaOTWH5Tc8hQ1ZI1IDJcCjASFIkUFhalKl0A76I2RqYQUE8LDc8GMhdLKMzcFJI02snpgNN0yxdnGy4IbkvOH5V7RUWhyVAH74SBwIgOLpljQRnGRw7hHWdsPZfNLYLCqS2ZINReuDCRfliTZsVCGoFZ8SwDiYoYnfa7FxXwFMnvqLlf72+W6SO1xl2mNrL+haI683f+rxC3wMnMmpekEt/NXST3OcvZpl/7C2clTUZuvZopVx4xu2xR4PEzPgz04U4rtYMxUrmmeNxWZT1OM1ph2UW2AQtMoukTJ05PmZlOS1lby0ZjelaETMffs179+06yy5byGp+X3uymFW0cFGsvs6qrvoWtIubIvJFyvP98v1+tpNFl9rOuVtaFerSaRY7alCcZ0PiqToKBJvIqjWcwni0u0tcJ8rZDqnmDYRc5hMpnDGXzqWOyI49Zhc+sIcGdgIu0ukmrFc0FF72VtHfnKQb6ynWyMXnl0RH3jhfTOfm9kIbiVdkbTynwji0efSOzAv9SQEhO6i5zf/Xxarh+/3D/4Co2tp4h9FEUx0cWOLt67GzqMFkDVU0hG51t0fYGai1WCiZFqZwl4FnJNt8JS24pCxzedOmsEXCRlQz3sRVkXfisLnZ2m4KH/Y3tvMggOL9hcCqfM9c1ECkO2h0xRw/LPxLUoyFHAZuf2lSxL17TO8pyeaXDAUqNXg0khYbR3mQ4gJLHLRqTvRh5IHxqHfxHP5rk=</source>
+  </file>
+  <file path="App\Views\Layouts\footer.php" generated-path="App.Views.Layouts.footer.html" hash="2f2076a60569c8f33b6c9d674f8f92c0" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJyz0U/KT6m04+Wy0c8oyc0BMni5ADtBBPs=</source>
+  </file>
+  <file path="App\Controllers\Home.php" generated-path="App.Controllers.Home.html" hash="032dc38b3bc8a6b44dd32d5217984616" package="Default">
+    <docblock line="0">
+      <description>Home controller</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="View">\Core\View</namespace-alias>
+    <class final="false" abstract="false" namespace="App\Controllers" line="14" package="App\Controllers">
+      <extends>\Core\Controller</extends>
+      <name>Home</name>
+      <full_name>\App\Controllers\Home</full_name>
+      <docblock line="14">
+        <description>Class Home</description>
+        <long-description></long-description>
+        <tag name="package" line="14" description="App\Controllers"/>
+        <tag name="inherited_from" description="\Core\Controller" refers="\Core\Controller" link="/classes/Core.Controller.html"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="App\Controllers" line="19" package="Core">
+        <name>$route_params</name>
+        <full_name>\Core\Controller::route_params</full_name>
+        <default>array()</default>
+        <docblock line="19">
+          <description>Parameters from the matched routes</description>
+          <long-description></long-description>
+          <tag name="var" line="19" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="20" package="App\Controllers">
+        <name>indexAction</name>
+        <full_name>\App\Controllers\Home::indexAction()</full_name>
+        <docblock line="20">
+          <description>Show index page for Home controller.</description>
+          <long-description></long-description>
+          <tag name="return" line="20" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="33" package="App\Controllers">
+        <name>before</name>
+        <full_name>\App\Controllers\Home::before()</full_name>
+        <docblock line="33">
+          <description>Before filter.</description>
+          <long-description></long-description>
+          <tag name="return" line="33" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="inherited_from" description="\Core\Controller::before()" refers="\Core\Controller::before()" link="/classes/Core.Controller.html#method_before"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="42" package="App\Controllers">
+        <name>after</name>
+        <full_name>\App\Controllers\Home::after()</full_name>
+        <docblock line="42">
+          <description>After filter</description>
+          <long-description></long-description>
+          <tag name="return" line="42" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="inherited_from" description="\Core\Controller::after()" refers="\Core\Controller::after()" link="/classes/Core.Controller.html#method_after"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="26" package="Core">
+        <name>__construct</name>
+        <full_name>\Core\Controller::__construct()</full_name>
+        <docblock line="26">
+          <description>Controller constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="26" description="&lt;p&gt;Parameters from the route&lt;/p&gt;" type="array" variable="$route_params">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="26" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$route_params</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Controllers" line="41" package="Core">
+        <name>__call</name>
+        <full_name>\Core\Controller::__call()</full_name>
+        <docblock line="41">
+          <description>Magic method called when a non-existent or inaccessible method is
+called on an object of this class. Used to execute before and after
+filter methods on action methods. Action methods need to be named
+with an "Action" suffix, e.g. indexAction, showAction etc.</description>
+          <long-description></long-description>
+          <tag name="param" line="41" description="&lt;p&gt;Method name&lt;/p&gt;" type="string" variable="$name">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="41" description="&lt;p&gt;arguments passed to method&lt;/p&gt;" type="array" variable="$arguments">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="41" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$arguments</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="59" package="Core">
+        <name>before</name>
+        <full_name>\Core\Controller::before()</full_name>
+        <docblock line="59">
+          <description>Before filter - called before an action method.</description>
+          <long-description></long-description>
+          <tag name="return" line="59" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="App\Controllers" line="67" package="Core">
+        <name>after</name>
+        <full_name>\Core\Controller::after()</full_name>
+        <docblock line="67">
+          <description>After filter - called after an action method.</description>
+          <long-description></long-description>
+          <tag name="return" line="67" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="App\Controllers" line="71" package="Core">
+        <name>validate</name>
+        <full_name>\Core\Controller::validate()</full_name>
+        <docblock line="71">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type/>
+        </argument>
+        <inherited_from>\Core\Controller</inherited_from>
+      </method>
+    </class>
+    <source>eJyVkNFOwjAUhq+7ZO/QEJNthMA9IDIXjCZGL5Z4I4aM7uAaR9t0nZAQnsELX4Rwa3yH+Ua2BSfKhfGiTfv3P985f/tnIhOu02k2XQc38SWfAyacKcnzHKTROq7jOiyZQyESAjgUYhzVhqLnOmUBWEsSxncUFj1j/8JFeVIUFmqvQ014Sh6PIHUbUvsxLBWwtNiTo4ORVq6DbAOkkXHGF5iyFJZYGPKMy98h2jvnUIIqJcPPnKZW0R2RKKc5JXhWMqIoZztSaM9+YBohIBnHjb6QMGj0jCAkZWoi/ZNJPIrjq9ubwMome7cr9cwgfc+M0LGwtv5fr2Uc6N7uyFNU5eCdDrzqtXqrNtW2eq82Hy9710MLX4TX8chi13odxj0HHVCnpLn6I5jkCoiC9Dvb1Nb6gX5dmc8+goczDd2z/4dOTOVP8voTccqssg==</source>
+  </file>
+  <file path="App\Views\Layouts\topmenu.php" generated-path="App.Views.Layouts.topmenu.html" hash="f3f3d16a7dccdc2e09aaf11cc44bbc97" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJyzyUsss+Pl4rRJVMgoSk2zVdJXsvPIz0210U9EFS7ILy4p1s/MS0mtULILAHEgSmz0ISYAAP0qFPI=</source>
+  </file>
+  <package name="App" full_name="App">
+    <package name="Controllers" full_name="App\Controllers">
+      <package name="Admin" full_name="App\Controllers\Admin"/>
+    </package>
+    <package name="Models" full_name="App\Models"/>
+  </package>
+  <package name="Core" full_name="Core"/>
+  <package name="Default" full_name="Default"/>
+  <package name="global" full_name="global"/>
+  <namespace name="App" full_name="App">
+    <namespace name="Controllers" full_name="App\Controllers">
+      <namespace name="Admin" full_name="App\Controllers\Admin"/>
+    </namespace>
+    <namespace name="Models" full_name="App\Models"/>
+  </namespace>
+  <namespace name="Core" full_name="Core"/>
+  <deprecated count="0"/>
+</project>

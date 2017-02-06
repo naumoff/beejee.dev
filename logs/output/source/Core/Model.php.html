@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+/**
+ * Base Model Class File
+ */
+
+namespace Core;
+
+use PDO;
+use \App\Config;
+
+/**
+ * Class Model
+ * @package Core
+ */
+abstract class Model {
+	
+	private static $host = Config::DB_HOST;
+	private static $dbname = Config::DB_NAME;
+	private static $username = Config::DB_USER;
+	private static $password = Config::DB_PASS;
+	protected static $db;
+	
+	protected static function getDB()
+	{
+		static::$db = new PDO(&quot;mysql:host=&quot;.self::$host.&quot;;dbname=&quot;.self::$dbname.&quot;;charset=utf8&quot;,self::$username,self::$password);
+		static::$db-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		return static::$db;
+	}
+	
+}</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+/**
+ * Front Controller.
+ * Front controller (in public folder)
+ * @filesource
+ */
+session_start();
+/**
+ * Autoloader.
+ * Function that autoloads files that contains requested Class names
+ * @param string $class class name
+ * @return void
+ */
+spl_autoload_register(function($class){
+	$root = dirname(__DIR__);
+	$file = $root.'/'.str_replace('\\', '/', $class).'.php';
+	if(is_readable($file)){
+		require $file;
+	}
+});
+
+/**
+ * Errors and exceptions handling set functions
+ */
+set_error_handler('Core\Error::errorHandler');
+set_exception_handler('Core\Error::exceptionHandler');
+
+/**
+ * Routing
+ */
+$router = new Core\Router();
+
+// add routes section $routerObject-&gt;addRoute($url,$params)
+// precise patterns
+$router-&gt;addRoute('', ['controller'=&gt;'Home','action'=&gt;'index']);
+
+// web route patters
+$router-&gt;addRoute('{controller}/{action}');
+$router-&gt;addRoute('{controller}/{id:\d+}/{action}');
+
+// admin route patterns
+$router-&gt;addRoute('admin/{controller}/{action}',['namespace'=&gt;'Admin']);
+
+//setting the current $url
+$url = $_SERVER['QUERY_STRING'];
+
+$router-&gt;dispatch($url);</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>
