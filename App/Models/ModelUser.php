@@ -40,7 +40,7 @@ class ModelUser extends \Core\Model{
 	 */
 	public static function getUserName()
 	{
-		if(empty(self::$userName) && !empty($_SESSION['userName'])){
+		if(empty(self::$userName) && isset($_SESSION['userName'])){
 			self::$userName = $_SESSION['userName'];
 			return self::$userName;
 		}else if(!empty(self::$userName)){

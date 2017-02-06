@@ -1,4 +1,4 @@
 <nav>
 	<a href="/">Home</a>
-	<a href="/posts/index">Posts</a>
+	<a href="/task/index">Tasks</a>
 </nav>
