@@ -1,4 +1,3 @@
-<button><a href="/">Home</a></button>
 <h3>User Registration</h3>
 <?php if(isset($errorMessage)){ ?>
 	<p style="color: red"><?= $errorMessage ?></p>

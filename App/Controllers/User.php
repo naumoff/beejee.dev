@@ -19,10 +19,11 @@ class User extends \Core\Controller {
 	 * @return void
 	 */
 	public function registerFormAction() {
-		View::render('User/registerForm.php',
+		View::render(
 			[
+				'content'=>'User\registerForm.php',
 				'title' => 'Registration',
-			], FALSE);
+			]);
 	}
 	
 	/**
@@ -68,13 +69,14 @@ class User extends \Core\Controller {
 		}
 		
 		if ($formData === FALSE) {
-			View::render('User/registerForm.php',
+			View::render(
 				[
+					'content'=>'User/registerForm.php',
 					'title' => "Registration",
 					'user' => $_POST['user'],
 					'email' => $_POST['email'],
 					'errorMessage' => $errorMessage
-				], FALSE);
+				]);
 		}
 		else {
 			if ($formData === TRUE) {
@@ -88,13 +90,14 @@ class User extends \Core\Controller {
 				$errorMessage .= ModelUser::checkUserEmail($data);
 				
 				if (!empty($errorMessage)) {
-					View::render('User/registerForm.php',
+					View::render(
 						[
+							'content'=>'User/registerForm.php',
 							'title' => "Registration",
 							'user' => $_POST['user'],
 							'email' => $_POST['email'],
 							'errorMessage' => $errorMessage
-						], FALSE);
+						]);
 				}
 				else {
 					$userAddStatus = ModelUser::userRegistration($data);
@@ -102,13 +105,14 @@ class User extends \Core\Controller {
 						header("Location: /user/login-form");
 					}
 					else {
-						View::render('User/registerForm.php',
+						View::render(
 							[
+								'content'=>'User/registerForm.php',
 								'title' => "Registration",
 								'user' => $_POST['user'],
 								'email' => $_POST['email'],
 								'errorMessage' => 'User was not registered because of unknown reasons!'
-							], FALSE);
+							]);
 					}
 				}
 			}
@@ -120,10 +124,11 @@ class User extends \Core\Controller {
 	 * @return void
 	 */
 	public function loginFormAction() {
-		View::render('User/loginForm.php',
+		View::render(
 			[
+				'content'=>'User/loginForm.php',
 				'title' => "login"
-			], FALSE);
+			]);
 	}
 	
 	/**
@@ -144,8 +149,9 @@ class User extends \Core\Controller {
 			}
 			$result = \App\Models\ModelUser::userLogin($_POST);
 			if($result === TRUE){
-				View::render('User/successPage.php',
+				View::render(
 					[
+						'content'=>'User/successPage.php',
 						'title'=>'Success',
 						'user'=>$_SESSION['userName']
 					]);

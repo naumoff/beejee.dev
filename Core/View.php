@@ -8,56 +8,66 @@ namespace Core;
 /**
  * Central Class View.
  * Provides function to render html files
- * @todo decide what to do with customPath variable
  * @package Core
  */
 
 class View {
-	/**
-	 * @var string $customPath path to custom templates in views folder
-	 */
-	private static $customPath;
-	/**
-	 * @var string $header path to header template
-	 */
-	private static $header;
-	/**
-	 * @var string $topMenu path to topMenu template
-	 */
-	private static $topMenu;
-	/**
-	 * @var string $footer path footer template
-	 */
-	private static $footer;
 	
-	/**
-	 * Render a view file.
-	 * @param string $view the path to view file
-	 * @param array $args arguments passed to view
-	 * @return void
-	 */
-	public static function render($view, $args=[], $menu = TRUE)
+	public static $standardFolder = 'Layouts';
+	
+	public static $viewRoot;
+	
+	public static $header = '\header.php';
+	
+	public static $topmenu = '\topmenu.php';
+	
+	public static $footer = '\footer.php';
+	
+	public static $content;
+	
+	public static function render($params)
 	{
-		self::$customPath = dirname(__DIR__).'\App\Views\\'.$view;
-		$pattern = '/\/.*/i';
-		self::$customPath = preg_replace($pattern, '', self::$customPath);
-		
-		// header, top menu and footer assigning
-		self::$header = dirname(__DIR__).'\App\Views\Layouts\header.php';
-		self::$topMenu = dirname(__DIR__).'\App\Views\Layouts\topmenu.php';
-		self::$footer = dirname(__DIR__).'\App\Views\Layouts\footer.php';
-		
-		extract($args,EXTR_SKIP);
-		$file = "../App/Views/{$view}"; // relative to core directory
-		if(is_readable($file)){
-			include self::$header;
-			if($menu) {
-				include self::$topMenu;
-			}
-			include $file; // html content from view folder gen by controller
-			include self::$footer;
+		if(array_key_exists('folder',$params)) {
+			self::$viewRoot = dirname(__DIR__).'\App\Views\\'.$params['folder'];
 		}else{
-			echo "{$file} not found!";
+			self::$viewRoot = dirname(__DIR__).'\App\Views\\'.self::$standardFolder;
+		}
+		
+		if(array_key_exists('content', $params)){
+			self::$content = dirname(__DIR__).'\App\Views\\'.$params['content'];
+			if(is_readable(self::$content)){
+				$data['content'] = self::$content;
+			}
+		}
+		
+		if(is_dir(self::$viewRoot)){
+			// header.php defining
+			if(is_readable(self::$viewRoot.self::$header)){
+				$data['header'] = self::$viewRoot.self::$header;
+			}
+			
+			//topmenu.php defining
+			if(is_readable(self::$viewRoot.self::$topmenu)){
+				$data['topmenu'] = self::$viewRoot.self::$topmenu;
+			}
+			
+			//footer.php defining
+			if(is_readable(self::$viewRoot.self::$footer)){
+				$data['footer'] = self::$viewRoot.self::$footer;
+			}
+			
+			unset($params['folder']);
+			unset($params['content']);
+			if(!empty($params) && is_array($params)){
+				foreach ($params AS $key=>$value){
+					$data[$key]=$value;
+				}
+			}
+			extract($data,EXTR_SKIP);
+			require self::$viewRoot.'\master.php';
+			
+		}else{
+			exit("Main view folder path failed!");
 		}
 	}
 }

@@ -21,20 +21,23 @@ class Home extends \Core\Controller
 	public function indexAction(){
 		if(\App\Models\ModelUser::getUserID() == FALSE){
 			$auth = FALSE;
-			View::render('Home/index.php',
+
+			View::render(
 				[
-					'title'=>'Главная',
+					'content' => 'Home/index.php',
+					'title' => 'Главная',
 					'auth'=>$auth
-				], FALSE);
+				]);
 		}else{
 			$auth = TRUE;
 			$userName = \App\Models\ModelUser::getUserName();
-			View::render('Home/index.php',
+			View::render(
 				[
+					'content'=>'Home/index.php',
 					'title'=>'Главная',
 					'auth'=>$auth,
 					'userName'=>$userName
-				], TRUE);
+				]);
 		}
 
 	}
