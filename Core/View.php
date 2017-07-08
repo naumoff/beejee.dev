@@ -1,73 +1,51 @@
 <?php
-/**
- * Base view file
- */
 
 namespace Core;
 
-/**
- * Central Class View.
- * Provides function to render html files
- * @package Core
- */
+use Philo\Blade\Blade;
 
-class View {
-	
-	public static $standardFolder = 'Layouts';
-	
-	public static $viewRoot;
-	
-	public static $header = '\header.php';
-	
-	public static $topmenu = '\topmenu.php';
-	
-	public static $footer = '\footer.php';
-	
-	public static $content;
-	
-	public static function render($params)
+/**
+ * View
+ *
+ * PHP version 5.4
+ */
+class View
+{
+
+	public static function test()
 	{
-		if(array_key_exists('folder',$params)) {
-			self::$viewRoot = dirname(__DIR__).'\App\Views\\'.$params['folder'];
-		}else{
-			self::$viewRoot = dirname(__DIR__).'\App\Views\\'.self::$standardFolder;
-		}
+		$path = dirname(dirname(__File__)).'/App/Views';
+		$views = $path;
+		$cache = $path.'/cache/';
 		
-		if(array_key_exists('content', $params)){
-			self::$content = dirname(__DIR__).'\App\Views\\'.$params['content'];
-			if(is_readable(self::$content)){
-				$data['content'] = self::$content;
-			}
-		}
+//		var_dump($views);
+//		var_dump($cache);
+		$blade = new Blade($views, $cache);
+//		echo "<pre>";
+//		print_r($blade);
 		
-		if(is_dir(self::$viewRoot)){
-			// header.php defining
-			if(is_readable(self::$viewRoot.self::$header)){
-				$data['header'] = self::$viewRoot.self::$header;
-			}
-			
-			//topmenu.php defining
-			if(is_readable(self::$viewRoot.self::$topmenu)){
-				$data['topmenu'] = self::$viewRoot.self::$topmenu;
-			}
-			
-			//footer.php defining
-			if(is_readable(self::$viewRoot.self::$footer)){
-				$data['footer'] = self::$viewRoot.self::$footer;
-			}
-			
-			unset($params['folder']);
-			unset($params['content']);
-			if(!empty($params) && is_array($params)){
-				foreach ($params AS $key=>$value){
-					$data[$key]=$value;
-				}
-			}
-			extract($data,EXTR_SKIP);
-			require self::$viewRoot.'\master.php';
-			
-		}else{
-			exit("Main view folder path failed!");
-		}
+		echo $blade->view()->make('Test.content')->render();
 	}
+	
+//	/**
+//     * Render a view file
+//     *
+//     * @param string $view  The view file
+//     * @param array $args  Associative array of data to display in the view (optional)
+//     *
+//     * @return void
+//     */
+//    public static function render($view, $args = [])
+//    {
+//        extract($args, EXTR_SKIP);
+//
+//        $file = "../App/Views/$view";  // relative to Core directory
+//
+//        if (is_readable($file)) {
+//            require $file;
+//        } else {
+//            throw new \Exception("$file not found");
+//        }
+//    }
+
 }

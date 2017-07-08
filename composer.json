@@ -1,5 +1,5 @@
 {
-  "name": "vendor_name/mvc-beejee",
+  "name": "vendor_name/mvc",
   "description": "mvc application",
   "minimum-stability": "stable",
   "license": "proprietary",
@@ -10,7 +10,9 @@
     }
   ],
   "require": {
-    "phpdocumentor/phpdocumentor": "2.*",
-    "graphp/graphviz": "v0.2.1"
+    "twbs/bootstrap": "4.0.0-alpha.6",
+    "components/jquery": "^3.2",
+    "components/jqueryui": "^1.12",
+    "philo/laravel-blade": "3.*"
   }
 }

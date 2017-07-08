@@ -34,19 +34,21 @@ class Task extends \Core\Controller{
 	public function listAction()
 	{
 		$data = ModelTask::getUserTaskList($this->userID);
-		View::render('Task/index.php',
+		View::render(
 			[
+				'content'=>'Task/index.php',
 				'title'=> 'My tasks',
-				'data' => $data
+				'datas' => $data
 			]);
 	}
 	
 	public function addFormAction()
 	{
-		View::render('Task/taskForm.php',
+		View::render(
 			[
+				'content'=>'Task/taskForm.php',
 				'title'=>'Add Task'
-			],FALSE);
+			]);
 	}
 	
 	public function addTaskAction()

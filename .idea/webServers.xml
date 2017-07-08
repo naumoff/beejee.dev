@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="807c68ee-a94e-45d8-b5b7-9a129fbef80a" name="OpenServer" url="http://beejee.dev">
-        <fileTransfer port="0" mountedRoot="C:\WEBDEV\NewOS\domains\ProjectBox\beejee.dev\public" accessType="MOUNT" />
+      <webServer id="807c68ee-a94e-45d8-b5b7-9a129fbef80a" name="OpenServer" url="http://mvc.dev">
+        <fileTransfer port="0" mountedRoot="C:\WEBDEV\NewOS\domains\ProjectBox\mvc.dev\public" accessType="MOUNT" />
       </webServer>
     </option>
   </component>

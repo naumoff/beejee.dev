@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - pr_beejee@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="pr_beejee">
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="pr_mvc"/>
+    <schema id="7" parent="1" name="sys"/>
+    <table id="8" parent="2" name="user"/>
+    <table id="9" parent="2" name="task"/>
+    <column id="10" parent="8" name="id">
+      <DataType>int(15)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="11" parent="8" name="user">
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="12" parent="8" name="email">
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="13" parent="8" name="pass">
+      <DataType>varchar(250)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="14" parent="8" name="created">
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="15" parent="8" name="email">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="16" parent="8" name="user">
+      <ColNames>user</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="17" parent="8" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="18" parent="8" name="user">
+      <ColNames>user</ColNames>
+      <UnderlyingIndexName>user</UnderlyingIndexName>
+    </key>
+    <key id="19" parent="8" name="email">
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>email</UnderlyingIndexName>
+    </key>
+    <column id="20" parent="9" name="id">
+      <DataType>bigint(15)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="21" parent="9" name="n">
+      <DataType>int(15)|0</DataType>
+    </column>
+    <column id="22" parent="9" name="user_id">
+      <DataType>int(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="9" name="task">
+      <DataType>varchar(250)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="9" name="date">
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="9" name="pictures">
+      <DataType>varchar(250)|0</DataType>
+    </column>
+    <column id="26" parent="9" name="status">
+      <DataType>enum(&apos;Open&apos;, &apos;Cancelled&apos;, &apos;Postponed&apos;, &apos;Completed&apos;)|0</DataType>
+    </column>
+    <index id="27" parent="9" name="user_id">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="28" parent="9" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="29" parent="9" name="task_ibfk_1">
+      <ColNames>user_id</ColNames>
+      <RefTableName>user</RefTableName>
+      <RefKeyName>user</RefKeyName>
+      <RefColNames>user</RefColNames>
+      <OnUpdate>restrict</OnUpdate>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+  </database-model>
+</dataSource>

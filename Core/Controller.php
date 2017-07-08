@@ -26,6 +26,8 @@ abstract class Controller
 	public function __construct($route_params)
 	{
 		$this->route_params = $route_params;
+//		echo "<pre>";
+//		print_r($route_params);
 	}
 	
 	/**
@@ -54,6 +56,8 @@ abstract class Controller
 	
 	/**
 	 * Before filter - called before an action method.
+	 * Need to be modified in each child controller
+	 * If it returns false in child controller, method will not run
 	 * @return void
 	 */
 	protected function before()
@@ -62,6 +66,7 @@ abstract class Controller
 	
 	/**
 	 * After filter - called after an action method.
+	 * Need to be modified in each child controller
 	 * @return void
 	 */
 	protected function after()

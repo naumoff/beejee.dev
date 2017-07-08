@@ -5,6 +5,12 @@
  * @filesource
  */
 session_start();
+
+/**
+ * required to load blade template engine
+ */
+require '../vendor/autoload.php';
+
 /**
  * Autoloader.
  * Function that autoloads files that contains requested Class names
@@ -34,3 +40,8 @@ require('../App/Router.php');
 $url = $_SERVER['QUERY_STRING'];
 
 $router->dispatch($url);
+
+// uncomment this to see current controller & action
+echo "<pre>";
+print_r($router->getRoutes());
+print_r($router->getParams());

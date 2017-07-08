@@ -50,6 +50,14 @@ class Router
 		$route = '/^' .$route. '$/i';
 		
 		$this->routes[$route]=$params;
+		// one of possible outcome:
+		// $this->routes[
+		//     '/^
+		//      ?P<controler>([a-z-]+)\/
+		//      ?P<id>([\d]+)\/
+		//      ?P<action>([a-z-]+)
+		//      $/i'
+		// ]=''
 	}
 	
 	/**
@@ -100,13 +108,18 @@ class Router
 			$controller = $this->convertToStudlyCaps($controller);
 //			$controller = '\\App\\Controllers\\'.$controller;
 			$controller = $this->getNamespace() . $controller;
+			$id = (isset($this->params['id']))? $this->params['id']:null;
 			
 			if(class_exists($controller)){
 				$controllerObject = new $controller($this->params);
 				$action = $this->params['action'];
 				$action = $this->convertToCamelCase($action);
 				if(is_callable([$controllerObject,$action])){
-					$controllerObject->$action();
+					if($id){
+						$controllerObject->$action($id);
+					}else{
+						$controllerObject->$action();
+					}
 				}else{
 					throw new \Exception("Method {$action} in Controller {$controller} not found");
 				}
