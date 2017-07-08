@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: andre
- * Date: 08.07.2017
- * Time: 17:08
- */
 
 namespace App\Controllers;
 
@@ -15,13 +9,18 @@ class Test extends Controller{
 	
 	public function restAction()
 	{
-		
-		View::test();
-//		var_dump($id);
+		$view = 'Test.content';
+		$data = 777;
+		View::render($view, compact('data'));
 	}
 	
 	public function before()
 	{
 //		return false;
+	}
+	
+	public function after()
+	{
+	
 	}
 }
