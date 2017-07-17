@@ -42,6 +42,6 @@ $url = $_SERVER['QUERY_STRING'];
 $router->dispatch($url);
 
 // uncomment this to see current controller & action
-echo "<pre>";
-print_r($router->getRoutes());
-print_r($router->getParams());
+//echo "<pre>";
+//print_r($router->getRoutes());
+//print_r($router->getParams());
